@@ -1,0 +1,44 @@
+﻿{
+  propertyEditors:
+  [ 
+    {
+      alias: "Netaddicts.GMaps",
+      name: "Google Maps w/ Google Places Autocomplete lookup",
+      editor:  
+      {
+        view: "~/App_Plugins/GMaps/GMaps.html"
+      },
+      prevalues: {
+        fields:[
+          {
+            label: "Latitude",
+            description: "Enter your default starting latitude",
+            key: "lat",
+            view: "textstring"
+          },
+          {
+            label: "Longitude",
+            description: "Enter your default starting longitude",
+            key: "lng",
+            view: "textstring"
+          },
+          {
+            label: "Zoom level",
+            description: "Enter your default zoom level",
+            key: "zoomlevel",
+            view: "textstring"
+          }
+        ]
+      },
+      defaultConfig:{
+        lat: 51.0441581,
+        lng: 3.4609621,
+        zoomlevel: 15
+      }
+    } 
+  ],
+  javascript:  
+  [
+    "~/App_Plugins/GMaps/GMaps.controller.js"
+  ]
+}

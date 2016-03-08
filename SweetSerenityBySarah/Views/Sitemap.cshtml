@@ -1,0 +1,76 @@
+﻿@inherits UmbracoTemplatePage
+@using umbraco.MacroEngines;
+@{
+    Response.ContentType = "text/xml";
+    var homeNode = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
+    if (homeNode != null && homeNode.TemplateId > 0)
+        {
+        var homepage = new DynamicNode(homeNode.Id);
+<text><?xml version='1.0' encoding='UTF-8' ?>
+            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemalocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+                <url>
+                    <loc>@GetUrlWithDomainPrefix(homeNode.Url)</loc>
+                    <lastmod>@(string.Format("{0:s}+00:00", homeNode.UpdateDate))</lastmod>
+                    @if (homeNode.GetProperty("sEOSitemapFrequency").HasValue)
+                        {
+                        <changefreq>@homeNode.GetPropertyValue("sEOSitemapFrequency")</changefreq>
+                        }
+                    @if (homeNode.GetProperty("sEOSitemapPriority").HasValue)
+                        {
+                        <priority>@homepage.GetPropertyValue("sEOSitemapPriority")</priority>
+                        }
+                </url>
+                @ListChildNodes(homepage)
+            </urlset>
+        </text>
+        }
+}
+
+@helper ListChildNodes(DynamicNode startNode)
+    {
+
+        const int maxLevelForSiteMap = 100;
+
+
+        foreach (DynamicNode node in startNode.ChildrenAsList.Where(x => x.HasAccess && !(x.IsProtected)))
+        {
+            var hideInSitemap = node.GetProperty("searchEngineSiteMapHide").Value;
+            if (node.template > 0 && hideInSitemap == "0")
+                {
+                <url>
+                    <loc>@GetUrlWithDomainPrefix(node.Url)</loc>
+                    <lastmod>@(string.Format("{0:s}+00:00", node.UpdateDate))</lastmod>
+                    @if (!string.IsNullOrEmpty(node.GetProperty("sEOSitemapFrequency").Value))
+                        {
+                        <changefreq>@node.GetPropertyValue("sEOSitemapFrequency")</changefreq>
+                        }
+                    @if (!string.IsNullOrEmpty(node.GetProperty("sEOSitemapPriority").Value))
+                        {
+                            <priority>@node.GetPropertyValue("sEOSitemapPriority")</priority>
+                        }
+                </url>
+                }
+
+            if (node.Level <= maxLevelForSiteMap && node.ChildrenAsList.Count() > 0)
+                {
+                @ListChildNodes(node)
+                }
+            }
+}
+
+@functions{
+    private static string GetUrlWithDomainPrefix(string url)
+        {
+        if (url.StartsWith("/"))
+            url = url.Substring(1);
+
+        var domainPrefix = string.Format("http://{0}/", HttpContext.Current.Request.ServerVariables["HTTP_HOST"]);
+
+        if (url.StartsWith(domainPrefix))
+            return url;
+        else
+            return domainPrefix + url;
+        }
+}

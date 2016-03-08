@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @Html.Partial("Master/HeaderContent")
+
+    @*@Styles.Render("~/bundles/sitecss")*@
+
+    <link href="/Css/bootstrap.css" rel="stylesheet">
+    <link href="/Css/blueimp-gallery.min.css" rel="stylesheet">
+    <link href="/Css/bootstrap-image-gallery.css" rel="stylesheet">
+    <link href="/Css/SiteStyles.css" rel="stylesheet">
+
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    @RenderSection("headerCss", false)
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="/Scripts/html5shiv.min.js"></script>
+        <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    @Html.Partial("Master/MainNavigation")
+
+    @RenderBody()
+
+    @Html.Partial("Master/SiteFooter")
+
+    @*<script type="text/javascript" src="/Scripts/jQuery-v1.11.2.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="/Scripts/blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap-image-gallery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/SiteJQScripts.js"></script>*@
+
+    @Scripts.Render("~/bundles/sitescripts")
+
+    @RenderSection("footerScripts", false)
+
+</body>
+</html>

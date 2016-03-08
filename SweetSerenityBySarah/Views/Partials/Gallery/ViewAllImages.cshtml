@@ -1,0 +1,96 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    if (Model.Content.HasProperty("galleryAlbum") && Model.Content.HasValue("galleryAlbum"))
+        {
+        var galleryAlbumId = Model.Content.GetPropertyValue("galleryAlbum").ToString();
+        var galleryAlbum = Umbraco.TypedMedia(galleryAlbumId);
+        if (galleryAlbum != null && galleryAlbum.Id > 0 && galleryAlbum.ContentType.Alias == "Folder" && galleryAlbum.Descendants("Image").Any())
+            {
+            var albumImages = galleryAlbum.Descendants("Image").ToList();
+            var firstImage = galleryAlbum.Descendants("Image").FirstOrDefault();
+            var imageAlbumUrl = !string.IsNullOrEmpty(firstImage.GetCropUrl("galleryThumbnails")) ? firstImage.GetCropUrl("galleryThumbnails") : firstImage.GetCropUrl(200, 200);
+
+            <div class="col-lg-12">
+                <hr>
+                <h3 class="intro-text text-center">
+                    @Model.Content.Name
+                </h3>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="sliderOptions hidden-sm hidden-xs text-center clearfix">
+                    <button id="image-gallery-button" type="button" class="btn btn-primary btn-lg col-lg-3">
+                        Launch Gallery
+                        <i class="glyphicon glyphicon-picture"></i>
+                    </button>
+                    <label class="btn btn-primary btn-lg col-lg-3 col-lg-offset-1">
+                        <input id="borderless-checkbox" type="checkbox"> Borderless
+                        <i class="glyphicon glyphicon-leaf"></i>
+                    </label>
+                    <label class="btn btn-primary btn-lg col-lg-3 col-lg-offset-1">
+                        <input id="fullscreen-checkbox" type="checkbox"> Fullscreen
+                        <i class="glyphicon glyphicon-fullscreen"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div id="links" class="hidden-sm hidden-xs sliderImages">
+                    @foreach (var image in albumImages)
+                        {
+                        var imageThumbnail = !string.IsNullOrEmpty(image.GetCropUrl("advertImage")) ? image.GetCropUrl("advertImage") : image.GetCropUrl(300, 300);
+                        var sliderImage = image.GetCropUrl();
+                        <a href="@sliderImage" title="@galleryAlbum.Name Images" data-gallery class="col-lg-2">
+                            <img src="@imageThumbnail" alt="@galleryAlbum.Name Images" class="img-responsive">
+                        </a>
+                        }
+                </div>
+            </div>
+
+            <div class="col-lg-12 visible-sm visible-xs">
+                <div id="mobileLinks" class="row mobileSlider">
+                    <a href="@imageAlbumUrl" title="@galleryAlbum.Name Images" data-gallery class="col-lg-1">
+                        <img src="@imageAlbumUrl" alt="@galleryAlbum.Name Images" class="img-responsive img-border">
+                    </a>
+                    @foreach (var image in albumImages)
+                        {
+                        var sliderImage = image.GetCropUrl();
+                        <a href="@sliderImage" title="@galleryAlbum.Name Images" data-gallery class="hidden"></a>
+                        }
+                </div>
+            </div>
+            }
+        }
+
+        <div id="blueimp-gallery" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            @*<ol class="indicator"></ol>*@
+            <div class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body next"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary pull-left prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary next">
+                                Next
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+}

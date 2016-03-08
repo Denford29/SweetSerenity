@@ -1,0 +1,81 @@
+﻿@inherits UmbracoTemplatePage
+@section headerCss{
+}
+
+@{
+    Layout = "Master.cshtml";
+    var pageHeading = Model.Content.Name;
+    if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
+        {
+        pageHeading = Model.Content.GetPropertyValue("pageHeading").ToString();
+        }
+
+    var productTitle = Model.Content.Name;
+    if (Model.Content.HasProperty("linkTittle") && Model.Content.HasValue("linkTittle"))
+        {
+        productTitle = Model.Content.GetPropertyValue("linkTittle").ToString();
+        }
+        <div class="container">
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="brand-name">
+                            @pageHeading
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-9 bodyContent">
+                        <div class="row">
+
+                            @Html.Partial("Master/HeadingImage")
+
+                            <div class="col-lg-12 headerImage">
+                                @if (Model.Content.HasProperty("productDescription") && Model.Content.HasValue("productDescription"))
+                                    {
+                                    <div class="col-md-5 text-center">
+                                        @Html.Raw(Model.Content.GetPropertyValue("productDescription").ToString())
+                                        @if (Model.Content.HasProperty("foreverShopLink") && Model.Content.HasValue("foreverShopLink"))
+                                            {
+                                            var productShopLink = Model.Content.GetPropertyValue("foreverShopLink").ToString();
+                                            <a href="@productShopLink" title="@productTitle" class="btn btn-primary btn-large" target="_blank">
+                                                Buy @Model.Content.Name
+                                            </a>
+                                            }
+                                    </div>
+                                    }
+
+                                @if (Model.Content.HasProperty("productImage") && Model.Content.HasValue("productImage"))
+                                    {
+                                    var productImage = Umbraco.TypedMedia(Model.Content.GetPropertyValue("productImage").ToString());
+                                    if (productImage != null && productImage.Id > 0)
+                                        {
+                                        var imageUrl = !string.IsNullOrEmpty(productImage.GetCropUrl("ProductImage")) ? productImage.GetCropUrl("ProductImage") : productImage.GetCropUrl(700, 450);
+                                        <div class="col-md-7 text-center">
+                                            <img alt="@productTitle" src="@imageUrl" class="img-responsive">
+                                        </div>
+                                        }
+                                    }
+                            </div>
+
+                            @if (Model.Content.HasProperty("bodyText") && Model.Content.HasValue("bodyText"))
+                                {
+                                <div class="col-lg-12">
+                                    @Html.Raw(Model.Content.GetPropertyValue("bodyText"))
+                                </div>
+                                }
+                        </div>
+                    </div>
+
+                    @Html.Partial("Master/SideNavigation")
+
+                </div>
+            </div>
+        </div>
+}
+
+@section footerScripts{
+}

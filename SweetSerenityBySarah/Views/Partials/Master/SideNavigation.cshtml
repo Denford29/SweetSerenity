@@ -1,0 +1,148 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
+@using umbraco.MacroEngines;
+@{
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    var homepage = Model.Content.AncestorOrSelf(1);
+
+    var level2ParentNode = homepage;
+    if (Model.Content.Level != 1)
+        {
+        level2ParentNode = CurrentPage.level == 2 ? Model.Content : Model.Content.AncestorOrSelf(2);
+        }
+
+    if (level2ParentNode.Id > 0)
+        {
+        <div class="col-lg-3 visible-lg well well-lg">
+
+            @if (level2ParentNode.Children.Any(x => x.IsVisible()))
+                {
+                var childPages = level2ParentNode.Children.Where(level3Page => level3Page.IsVisible() && !level3Page.GetPropertyValue<bool>("hideFromMenu")).ToList();
+                <hr>
+                <h4 class="intro-text text-center">
+                    In
+                    <a href="@level2ParentNode.Url" title="@level2ParentNode.Name page">
+                        @level2ParentNode.Name
+                    </a>
+                    section...
+                </h4>
+                <hr>
+
+                <ul class="nav nav-pills nav-stacked">
+                    @foreach (var level3Node in childPages)
+                        {
+                        if (level3Node.Id == CurrentPage.Id || Model.Content.AncestorOrSelf(3).Id == level3Node.Id)
+                            {
+                    <li class="active">
+                        <a href="@level3Node.Url" title="@level3Node.Name page">@level3Node.Name</a>
+                    </li>
+                            }
+                        else
+                            {
+                    <li>
+                        <a href="@level3Node.Url" title="@level3Node.Name page">@level3Node.Name</a>
+                    </li>
+                            }
+                        }
+                </ul>
+                }
+            else
+                {
+                <hr>
+                <h4 class="intro-text text-center">
+                    Also on the website...
+                </h4>
+                <hr>
+                <ul class="nav nav-pills nav-stacked">
+                    @foreach (var level2Page in homepage.Children)
+                        {
+                        var hideFromSideMenu = level2Page.GetPropertyValue<bool>("hideFromMenu");
+                        if (level2Page.Id != CurrentPage.Id && !hideFromSideMenu)
+                            {
+                            var listPage = new DynamicNode(level2Page.Id);
+                    <li>
+                        <a href="@listPage.Url" title="@listPage.Name page">@listPage.Name</a>
+                    </li>
+                            }
+                        }
+                </ul>
+                }
+
+            <!--Facebook script - Start -->
+            <div id="fb-root"></div>
+            <script>
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=825414407581475";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <!--Facebook script - End -->
+            <hr>
+            <h4 class="intro-text text-center">
+                Visit our Facebook Page
+            </h4>
+            <hr>
+            <div class="fb-page"
+                 data-href="www.facebook.com/sweetserenitybysarah"
+                 data-tabs="timeline"
+                 data-width="350"
+                 data-height="400"
+                 data-small-header="false"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false" data-show-facepile="false">
+
+            </div>
+
+
+        @*@if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteAdvert").Any())
+            {
+            var siteAdverts = siteSetting.Descendants("SiteAdvert");
+            var r = new Random();
+            var displayedAdvert = siteSetting.Descendants("SiteAdvert").OrderBy(x => r.Next()).Take(siteAdverts.Count()).ToList().FirstOrDefault();
+            if (displayedAdvert != null && displayedAdvert.Id > 0)
+                {
+                if (displayedAdvert.HasProperty("advertImage") && displayedAdvert.HasValue("advertImage"))
+                    {
+                    var mediaItem = Umbraco.TypedMedia(displayedAdvert.GetPropertyValue("advertImage").ToString());
+                    if (mediaItem != null && mediaItem.Id > 0)
+                        {
+                        var imageUrl = !string.IsNullOrEmpty(mediaItem.GetCropUrl("advertImage")) ? mediaItem.GetCropUrl("advertImage") : mediaItem.GetCropUrl(300, 300);
+                        var advertTitle = mediaItem.Name;
+                        if (displayedAdvert.HasProperty("advertTitle") && displayedAdvert.HasValue("advertTitle"))
+                            {
+                            advertTitle = displayedAdvert.GetPropertyValue("advertTitle").ToString();
+                            }
+                        var advertLink = Model.Content.Url;
+                        var target = "_currentPage";
+                        if (displayedAdvert.HasProperty("internalLink") && displayedAdvert.HasValue("internalLink"))
+                            {
+                            var internalLinkPage = Umbraco.TypedContent(displayedAdvert.GetPropertyValue("internalLink").ToString());
+                            if (internalLinkPage != null && internalLinkPage.Id > 0)
+                                {
+                                advertLink = internalLinkPage.Url;
+                                }
+                            }
+                        else if (displayedAdvert.HasProperty("externalLinkUrl") && displayedAdvert.HasValue("externalLinkUrl"))
+                            {
+                            advertLink = displayedAdvert.GetPropertyValue("externalLinkUrl").ToString();
+                            target = "_blank";
+                            }
+                        <a href="@advertLink" title="@advertTitle" target="@target" class="text-center">
+                            <hr />
+                            <h5 class="intro-text">
+                                @advertTitle
+                            </h5>
+                            <hr />
+                            <img alt="@advertTitle image" src="@imageUrl" class="img-rounded img-responsive" />
+                        </a>
+                        }
+                    }
+                }
+            }*@
+
+        </div>
+        }
+}

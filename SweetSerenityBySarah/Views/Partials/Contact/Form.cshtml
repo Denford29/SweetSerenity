@@ -1,0 +1,67 @@
+﻿@model SweetSerenityBySarah.Models.ContactModel
+@{
+    <div class="col-md-6">
+        <div class="well well-lg">
+            <hr/>
+            <h5 class="intro-text text-center">
+                Send us your details...
+            </h5>
+            <hr/>
+            @if (TempData.ContainsKey("contactSuccess"))
+            {
+                var successMessage = (string) TempData["contactSuccess"];
+                <div role="alert" class="alert alert-success alert-dismissible fade in">
+                    <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>@Html.Raw(successMessage)</p>
+                </div>
+            }
+            else
+            {
+                using (Html.BeginUmbracoForm("ContactSubmit", "ContactSurface", FormMethod.Post, new {role = "form", id = "contactForm", name = "sentMessage"}))
+                {
+                    if (TempData.ContainsKey("contactError"))
+                    {
+                        var errorMessage = (string) TempData["contactError"];
+                        <div role="alert" class="alert alert-danger alert-dismissible fade in">
+                            <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <p>@Html.Raw(errorMessage)</p>
+                        </div>
+                    }
+
+                    @Html.AntiForgeryToken()
+                        @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.FullName, new {@class = "form-control", required = "", placeholder = "Your Full Name"})
+                        @Html.ValidationMessageFor(model => model.FullName, "", new {@class = "help-block text-danger"})
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.EmailAddress, new {@class = "form-control", required = "", placeholder = "Your Email Address"})
+                        @Html.ValidationMessageFor(model => model.EmailAddress, "", new {@class = "help-block text-danger"})
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.PhoneNumber, new {@class = "form-control", required = "", placeholder = "Your Phone Number"})
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new {@class = "help-block text-danger"})
+                    </div>
+                    <div class="form-group date">
+                        @Html.TextBoxFor(model => model.FormDate, new {@class = "form-control", required = "", placeholder = "Select Any Date"})
+                        @Html.ValidationMessageFor(model => model.FormDate, "", new {@class = "help-block text-danger"})
+                    </div>
+                    <div class="form-group">
+                        @Html.TextAreaFor(model => model.Message, new {@class = "form-control", required = "", placeholder = "Your Contact Message"})
+                        @Html.ValidationMessageFor(model => model.Message, "", new {@class = "help-block text-danger"})
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}

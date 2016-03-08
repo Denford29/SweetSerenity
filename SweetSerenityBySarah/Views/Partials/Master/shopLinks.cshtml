@@ -1,0 +1,23 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    if (Model.Content.Id == 1069 || Model.Content.Parent.Id == 1069)
+    {
+        <div class="row clearfix headerImage">
+            <hr>
+            <h3 class="modal-title intro-text text-center">
+                Our web shops
+            </h3>
+            <hr>
+            <div class="col-lg-6 text-center">
+                <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=GBR&language=en&distribID=440500054794" class="btn btn-primary btn-lg" target="_blank">
+                    British Web Shop
+                </a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=AUS&language=en&distribID=440500054794" class="btn btn-primary btn-lg" target="_blank">
+                    Australian Web Shop
+                </a>
+            </div>
+        </div>
+    }
+}

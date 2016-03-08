@@ -1,0 +1,117 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var childSections = Model.Content.Descendants().
+        Where(childPage => childPage.ContentType.Alias == "LandingPage"
+                           || childPage.ContentType.Alias == "StandardTextPage"
+                           || childPage.ContentType.Alias == "ProductPage"
+                           || childPage.ContentType.Alias == "GalleryPage")
+        .ToList();
+
+
+    if (childSections.Any())
+        {
+        var headingText = "sections";
+        var firstOrDefault = childSections.FirstOrDefault();
+        if (firstOrDefault != null)
+            {
+            if (firstOrDefault.ContentType.Alias == "StandardTextPage" || firstOrDefault.ContentType.Alias == "GalleryPage")
+                {
+                headingText = "pages";
+                }
+            else if (firstOrDefault.ContentType.Alias == "ProductPage")
+                {
+                headingText = "products";
+                }
+            }
+
+        var r = new Random();
+        var displayedSectionsPages = childSections.Where(page => page.ContentType.Alias == "StandardTextPage" || page.ContentType.Alias == "LandingPage" || page.ContentType.Alias == "GalleryPage").OrderBy(x => r.Next()).Take(3).ToList();
+        var displayedProducts = childSections.Where(page => page.ContentType.Alias == "ProductPage").OrderBy(x => r.Next()).Take(childSections.Count()).ToList();
+        <div class="col-lg-12">
+            <hr>
+            <h3 class="intro-text text-center">
+                @Model.Content.Name @headingText...
+            </h3>
+            <hr>
+        </div>
+        if (displayedSectionsPages.Any())
+            {
+            <div class="col-lg-12">
+                @foreach (var sectionPage in displayedSectionsPages)
+                    {
+                    <div class="col-sm-4 text-center">
+                        <div class="well well-lg">
+                            <h4>
+                                <a href="@sectionPage.Url" title="@sectionPage.Name">
+                                    @sectionPage.Name
+                                </a>
+                            </h4>
+                            @if (sectionPage.HasProperty("bodyText") && sectionPage.HasValue("bodyText"))
+                                {
+                                var displayedBodyText = sectionPage.GetPropertyValue("bodyText").ToString();
+                                var nonHtmlContent = Umbraco.StripHtml(displayedBodyText);
+                                var trimmedBodyText = Umbraco.Truncate(nonHtmlContent, 100);
+                                <p>
+                                    <small>
+                                        @trimmedBodyText
+                                    </small>
+                                </p>
+                                }
+                            <a href="@sectionPage.Url" title="@sectionPage.Name" class="btn btn-default">
+                                @sectionPage.Name
+                            </a>
+                        </div>
+                    </div>
+                    }
+            </div>
+            }
+        else if (displayedProducts.Any())
+            {
+            <div class="col-lg-12">
+                @foreach (var sectionProduct in displayedProducts)
+                    {
+                    if (sectionProduct.HasProperty("productImage") && sectionProduct.HasValue("productImage"))
+                        {
+                        var productImage = Umbraco.TypedMedia(sectionProduct.GetPropertyValue("productImage").ToString());
+                        if (productImage != null && productImage.Id > 0)
+                            {
+                            var productTitle = sectionProduct.Name;
+                            if (sectionProduct.HasProperty("linkTittle") && sectionProduct.HasValue("linkTittle"))
+                                {
+                                productTitle = sectionProduct.GetPropertyValue("linkTittle").ToString();
+                                }
+                            var imageUrl = !string.IsNullOrEmpty(productImage.GetCropUrl("ProductImage")) ? productImage.GetCropUrl("ProductImage") : productImage.GetCropUrl(700, 450);
+                            var productShopLink = sectionProduct.Url;
+                            var linkTarget = "_self";
+                            if (sectionProduct.HasProperty("foreverShopLink") && sectionProduct.HasValue("foreverShopLink"))
+                                {
+                                productShopLink = sectionProduct.GetPropertyValue("foreverShopLink").ToString();
+                                linkTarget = "_blank";
+                                }
+                            <div class="col-sm-4 text-center">
+                                <div class="thumbnail">
+                                    <img alt="@productTitle" src="@imageUrl">
+                                    <div class="caption">
+                                        <h4>
+                                            <a href="@sectionProduct.Url" title="@productTitle">
+                                                @productTitle
+                                            </a>
+                                        </h4>
+                                        <p>
+                                            <a href="@productShopLink" title="@productTitle" class="btn btn-primary" target="@linkTarget">
+                                                Buy Now
+                                            </a>
+                                            <a href="@sectionProduct.Url" title="@productTitle" class="btn btn-default">
+                                                Product Info
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                        }
+                    }
+            </div>
+            }
+        }
+}

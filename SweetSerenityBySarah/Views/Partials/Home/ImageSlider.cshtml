@@ -1,0 +1,95 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("ImageSlide").Any())
+        {
+        var r = new Random();
+        var sliderCount = siteSetting.Descendants("ImageSlide").Count(x => x.IsVisible());
+        var slidesList = siteSetting.Descendants("ImageSlide").Where(x => x.IsVisible()).OrderBy(x => r.Next()).Take(sliderCount).ToList();
+        var indicatorCounter = 0;
+        var sliderCounter = 0;
+
+        if (slidesList.Any())
+            {
+            <div id="carousel-example-generic" class="carousel slide">
+                <ol class="carousel-indicators">
+                    @foreach (var slide in slidesList)
+                        {
+                        indicatorCounter++;
+                        if (indicatorCounter == 1)
+                            {
+                            <li data-target="#carousel-example-generic" data-slide-to="@slide.Position()" class="active"></li>
+                            }
+                        else
+                            {
+                            <li data-target="#carousel-example-generic" data-slide-to="@slide.Position()"></li>
+                            }
+                        }
+                </ol>
+
+                <div class="carousel-inner">
+                    @foreach (var slider in slidesList)
+                        {
+                        sliderCounter++;
+                        if (slider.HasProperty("slideImage") && slider.HasValue("slideImage"))
+                            {
+                            var mediaItem = Umbraco.TypedMedia(slider.GetPropertyValue("slideImage").ToString());
+                            if (mediaItem != null && mediaItem.Id > 0)
+                                {
+                                var imageUrl = !string.IsNullOrEmpty(mediaItem.GetCropUrl("homeSlider")) ? mediaItem.GetCropUrl("homeSlider") : mediaItem.GetCropUrl(1200, 500);
+                                var slideClass = "item";
+                                if (sliderCounter == 1)
+                                    {
+                                    slideClass = "item active";
+                                    }
+
+                                <div class="@slideClass">
+                                    <img class="img-responsive img-full" src="@imageUrl" alt="@slider.Name">
+                                    @if (slider.HasProperty("slideImage") && slider.HasValue("slideImage"))
+                                        {
+
+                                        }
+                                    <div class="carousel-caption hidden-xs">
+                                        @if (slider.HasProperty("slideHeading") && slider.HasValue("slideHeading"))
+                                            {
+                                            <h2>
+                                                @slider.GetPropertyValue("slideHeading").ToString()
+                                            </h2>
+                                            }
+
+                                        @if (slider.HasProperty("slideText") && slider.HasValue("slideText"))
+                                            {
+                                            <p>
+                                                <strong>
+                                                    @slider.GetPropertyValue("slideText").ToString()
+                                                </strong>
+                                            </p>
+                                            }
+
+                                        @if (slider.HasProperty("slideLink") && slider.HasValue("slideLink"))
+                                            {
+                                            var linkPage = Umbraco.TypedContent(@slider.GetPropertyValue("slideLink").ToString());
+                                            if (linkPage != null && linkPage.Id > 0)
+                                                {
+                                                <a href="@linkPage.Url" class="btn btn-default btn-lg" title="@linkPage.Name">
+                                                    @linkPage.Name
+                                                </a>
+                                                }
+                                            }
+                                    </div>
+                                </div>
+                                }
+                            }
+                        }
+                </div>
+
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+            }
+        }
+}

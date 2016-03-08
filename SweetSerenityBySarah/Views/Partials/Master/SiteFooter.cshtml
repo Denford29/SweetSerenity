@@ -1,0 +1,79 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var siteDefaultName = "Sweet Serenity by Sarah";
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+    {
+        var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+        if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+        {
+            if (siteDetailsPage.HasProperty("siteName") && siteDetailsPage.HasValue("siteName"))
+            {
+                siteDefaultName = siteDetailsPage.GetPropertyValue("siteName").ToString();
+            }
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm12 col-md-4">
+                            <p>
+                                Copyright &copy; @siteDefaultName @DateTime.Now.Year
+                            </p>
+                        </div>
+                        <div class="col-sm12 col-md-4 text-center">
+                            @if (siteSetting.Descendants("SocialLinksContainer").Any())
+                                {
+                                var socialLinksParentPage = siteSetting.Descendants("SocialLinksContainer").FirstOrDefault();
+                                if (socialLinksParentPage != null && socialLinksParentPage.Id > 0 && siteSetting.Descendants("SocialLink").Any())
+                                    {
+                                    var socialLinks = siteSetting.Descendants("SocialLink");
+                                    <ul class="list-inline social-buttons">
+                                        @foreach (var link in socialLinks)
+                                            {
+                                            var linkName = link.Name;
+                                            if (link.HasProperty("linkTitle") && link.HasValue("linkTitle"))
+                                                {
+                                                linkName = link.GetPropertyValue("linkTitle").ToString();
+                                                }
+                                            var linkIcon = "";
+                                            if (link.HasProperty("faIcon") && link.HasValue("faIcon"))
+                                                {
+                                                linkIcon = link.GetPropertyValue("faIcon").ToString();
+                                                }
+                                            var linkUrl = "";
+                                            if (link.HasProperty("linkUrl") && link.HasValue("linkUrl"))
+                                                {
+                                                linkUrl = link.GetPropertyValue("linkUrl").ToString();
+                                                }
+
+                                            if (!string.IsNullOrEmpty(linkIcon) && !string.IsNullOrEmpty(linkUrl))
+                                                {
+                                                <li>
+                                                    <a href="@linkUrl" target="_blank" title="Follow us on @linkName" class="socialIcons">
+                                                        <i class="fa @linkIcon "></i>
+                                                    </a>
+                                                </li>
+                                                }
+                                            }
+                                    </ul>
+                                    }
+                                }
+                        </div>
+                        <div class="col-sm12 col-md-4">
+                            <p>
+                                <a href="http://rdmonline.co.uk/" title="RDM Online" target="_blank">
+                                    Website Crafted By RDM Online
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        }
+    }
+}
+
+@*<li>
+        <a href="https://www.foreverliving.com/retail/entry/Shop.do?store=GBR&language=en&distribID=440500054794" target="_blank">
+            <img src="/Images/foreverLogo.png" width="40" height="40" />
+        </a>
+    </li>*@

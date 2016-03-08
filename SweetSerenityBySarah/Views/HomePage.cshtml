@@ -1,0 +1,52 @@
+﻿@inherits UmbracoTemplatePage
+@section headerCss{
+}
+
+@{
+    Layout = "Master.cshtml";
+
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+
+                    @Html.Partial("Home/ImageSlider")
+
+                    @if (Model.Content.HasProperty("leadHeadingSmall") && Model.Content.HasValue("leadHeadingSmall"))
+                    {
+                        <h2 class="brand-before">
+                            <small>
+                                @Model.Content.GetPropertyValue("leadHeadingSmall").ToString()
+                            </small>
+                        </h2>
+                    }
+                    
+                    @if (Model.Content.HasProperty("leadHeadingLarge") && Model.Content.HasValue("leadHeadingLarge"))
+                    {
+                        <h1 class="brand-name">
+                            @Model.Content.GetPropertyValue("leadHeadingLarge").ToString()
+                        </h1>
+                        <hr class="tagline-divider">
+                    }
+                    
+                    <h2>
+                        <small>
+                            <strong>
+                                <a href="http://rdmonline.co.uk/" title="RDM Online" target="_blank">
+                                    Crafted By RDM Online
+                                </a>
+                            </strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        @Html.Partial("Home/SiteSections")
+
+    </div>
+
+}
+
+@section footerScripts{
+}

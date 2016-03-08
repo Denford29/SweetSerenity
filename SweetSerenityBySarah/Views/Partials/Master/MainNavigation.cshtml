@@ -1,0 +1,119 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var siteDefaultName = "Sweet Serenity by Sarah ";
+    var siteEmailAddress = "support@sweetserenitybysarah.com";
+    var sitePhoneNumber = "";
+    var siteLogo = "/Images/Sweet-Serenity-By-Sarah-Logo-1.png";
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+        {
+        var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+        if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+            {
+            if (siteDetailsPage.HasProperty("siteName") && siteDetailsPage.HasValue("siteName"))
+                {
+                siteDefaultName = siteDetailsPage.GetPropertyValue("siteName").ToString();
+                }
+            if (siteDetailsPage.HasProperty("siteEmailAddress") && siteDetailsPage.HasValue("siteEmailAddress"))
+                {
+                siteEmailAddress = siteDetailsPage.GetPropertyValue("siteEmailAddress").ToString();
+                }
+            if (siteDetailsPage.HasProperty("sitePhoneNumber") && siteDetailsPage.HasValue("sitePhoneNumber"))
+                {
+                sitePhoneNumber = siteDetailsPage.GetPropertyValue("sitePhoneNumber").ToString();
+                }
+            if (siteDetailsPage.HasProperty("siteLogo") && siteDetailsPage.HasValue("siteLogo"))
+                {
+                var mediaItem = Umbraco.TypedMedia(siteDetailsPage.GetPropertyValue("siteLogo").ToString());
+                if (mediaItem != null && mediaItem.Id > 0)
+                    {
+                    siteLogo = !string.IsNullOrEmpty(mediaItem.GetCropUrl("siteLogo")) ? mediaItem.GetCropUrl("siteLogo") : mediaItem.GetCropUrl(400, 150);
+                    }
+                }
+            }
+        }
+
+    var homePage = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
+    if (homePage != null && homePage.Id > 0)
+        {
+        var homeTitle = homePage.Name;
+        if (homePage.HasProperty("linkTittle") && homePage.HasValue("linkTittle"))
+            {
+            homeTitle = homePage.GetPropertyValue("linkTittle").ToString();
+            }
+
+        <div class="container headerBox">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <a href="@homePage.Url" title="@homeTitle - @siteDefaultName">
+                        <img class="img-responsive center-block siteLogo" src="@siteLogo" alt="@siteDefaultName Logo" />
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-9 hidden-xs">
+                    <div class="brand">
+                        <a href="@homePage.Url" title="@homeTitle - @siteDefaultName">
+                            @siteDefaultName
+                        </a>
+                    </div>
+                    <div class="address-bar">
+                        @siteEmailAddress
+                        @if (!string.IsNullOrEmpty(sitePhoneNumber))
+                            {
+                            <text> | </text>
+                            @sitePhoneNumber
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@homePage.Url" title="@homeTitle - @siteDefaultName">
+                        @siteDefaultName
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="collapseNavigation">
+                    <ul class="nav navbar-nav">
+                        <li @(homePage.Id == Model.Content.Id ? "class=active" : null)>
+                            <a href="@homePage.Url" title="@homeTitle - @siteDefaultName">
+                                @homeTitle
+                            </a>
+                        </li>
+                        @if (homePage.Children.Any())
+                            {
+                            foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu")))
+                                {
+                                var pageTitle = landingPage.Name;
+                                if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
+                                    {
+                                    pageTitle = landingPage.GetPropertyValue("linkTittle").ToString();
+                                    }
+
+                                <li @(landingPage.Id == Model.Content.Id ? "class=active" : Model.Content.AncestorOrSelf(2).Id == landingPage.Id ? "class=active" : null)>
+                                    <a href="@landingPage.Url" title="@pageTitle - @siteDefaultName">
+                                        @pageTitle
+                                    </a>
+                                </li>
+                                }
+                            }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        }
+}
+
+@*<li>
+        <a href="https://www.foreverliving.com/retail/entry/Shop.do?store=GBR&language=en&distribID=440500054794" target="_blank">
+            Forever Living
+        </a>
+    </li>*@
+

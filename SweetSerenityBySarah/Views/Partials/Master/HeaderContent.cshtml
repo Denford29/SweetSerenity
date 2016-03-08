@@ -1,0 +1,63 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var siteDefaultName = "Sweet Serenity by Sarah ";
+    string title;
+    string metaKeywords = "";
+    string metaDescription = "";
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+        {
+        var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+        if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+            {
+
+            if (siteDetailsPage.HasProperty("siteName") && siteDetailsPage.HasValue("siteName"))
+                {
+                siteDefaultName = siteDetailsPage.GetPropertyValue("siteName").ToString();
+                }
+
+            if (siteDetailsPage.HasProperty("defaultKeyWords") && siteDetailsPage.HasValue("defaultKeyWords"))
+                {
+                metaKeywords = siteDetailsPage.GetPropertyValue("defaultKeyWords").ToString();
+                }
+
+            if (siteDetailsPage.HasProperty("defaultMetaDescription") && siteDetailsPage.HasValue("defaultMetaDescription"))
+                {
+                metaDescription = siteDetailsPage.GetPropertyValue("defaultMetaDescription").ToString();
+                }
+            }
+        }
+
+
+    if (Model.Content.HasProperty("browserTitle") && Model.Content.HasValue("browserTitle"))
+        {
+        title = CurrentPage.browserTitle.ToString();
+        }
+    else
+        {
+        title = CurrentPage.Name.ToString() + " | " + siteDefaultName;
+        }
+        <title>@title</title>
+
+    if (Model.Content.HasProperty("metaKeywords") && Model.Content.HasValue("metaKeywords"))
+        {
+        metaKeywords = CurrentPage.metaKeywords.ToString() + " , " + metaKeywords + " , " + CurrentPage.Name.ToString();
+        }
+    else
+        {
+        metaKeywords = CurrentPage.Name.ToString() + " , " + metaKeywords + " , " + siteDefaultName;
+        }
+        <meta name="keywords" content="@metaKeywords" />
+
+    if (Model.Content.HasProperty("metaDescription") && Model.Content.HasValue("metaDescription"))
+        {
+        metaDescription = CurrentPage.metaDescription.ToString() + " - " + metaDescription;
+        }
+    else
+        {
+        metaDescription = CurrentPage.Name.ToString() + " - " + metaDescription + " - " + siteDefaultName;
+        }
+        <meta name="description" content="@metaDescription" />
+        <meta name="author" content="Denford R Mutseriwa - http://rdmonline.co.uk" />
+}

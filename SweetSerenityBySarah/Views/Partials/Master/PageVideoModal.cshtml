@@ -1,0 +1,50 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    if (Model.Content.HasProperty("pageVideo") && Model.Content.HasValue("pageVideo"))
+        {
+        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("pageVideo").ToString());
+        if (mediaItem != null && mediaItem.Id > 0 && mediaItem.ContentType.Alias == "File")
+            {
+            var videoUrl = mediaItem.Url;
+            var videoExt = mediaItem.GetPropertyValue("umbracoExtension").ToString();
+            var videoTitle = mediaItem.Name;
+            if (Model.Content.HasProperty("videoTitle") && Model.Content.HasValue("videoTitle"))
+                {
+                videoTitle = Model.Content.GetPropertyValue("videoTitle").ToString();
+                }
+            <div class="col-lg-12 text-center">
+                <h2>
+                    <small>
+                        @videoTitle
+                    </small>
+                </h2>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#videoModal">
+                    Play Video
+                </button>
+            </div>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title intro-text text-center" id="videoModalLabel">
+                        @videoTitle
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    @*<video controls id="pageVideo">
+                        <source src="@videoUrl" type="video/@videoExt">
+                        Your browser does not support the
+                        <code>video</code> element.
+                    </video>*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+            }
+        }
+}

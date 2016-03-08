@@ -1,0 +1,48 @@
+﻿@inherits UmbracoTemplatePage
+@section headerCss{
+}
+
+@{
+    Layout = "Master.cshtml";
+    var pageHeading = Model.Content.Name;
+    if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
+    {
+        pageHeading = Model.Content.GetPropertyValue("pageHeading").ToString();
+    }
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <h1 class="brand-name">
+                        @pageHeading
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box">
+
+                @if (Model.Content.HasProperty("bodyText") && Model.Content.HasValue("bodyText"))
+                {
+                    <div class="col-lg-12">
+                        @Html.Raw(Model.Content.GetPropertyValue("bodyText"))
+                    </div>
+                }
+
+                <div class="col-lg-12">
+
+                    @Html.Action("GetContactForm", "ContactSurface")
+
+                    @Html.Partial("Contact/LocationMap")
+
+                </div>
+
+                </div>
+        </div>
+    </div>
+}
+
+@section footerScripts{
+}
