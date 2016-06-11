@@ -1,4 +1,4 @@
-﻿/* GLOBAL STYLES
+/* GLOBAL STYLES
 -------------------------------------------------- */
 
 @font-face {
@@ -70,6 +70,7 @@ a {
     background-color: #9E0301;
     border-color: #9E0301;
     color: #fff;
+	margin-bottom:5px;
 }
 
     .btn-primary:hover,
@@ -505,3 +506,4 @@ ul.social-buttons {
         font-size: 1.5em;
     }
 }
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

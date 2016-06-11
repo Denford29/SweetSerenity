@@ -104,6 +104,38 @@
                                 </li>
                                 }
                             }
+
+
+                        @if (Request.IsAuthenticated)
+                            {
+                            var currentMember = Membership.GetUser();
+                            var haveUser = HttpContext.Current.User.Identity.IsAuthenticated;
+                            if (haveUser && currentMember != null)
+                                {
+                                using (Html.BeginForm("LogoutUser", "AccountSurface", FormMethod.Post, new { role = "form" }))
+                                    {
+                                    <li>
+                                        <a href="#" title="Logout - @siteDefaultName">
+                                            Logout
+                                        </a>
+                                    </li>
+                                    }
+                                }
+                            }
+                        else
+                            {
+                            <li>
+                                <a href="#" title="Login - @siteDefaultName">
+                                    Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Register - @siteDefaultName">
+                                    Register
+                                </a>
+                            </li>
+                            }
+
                     </ul>
                 </div>
             </div>

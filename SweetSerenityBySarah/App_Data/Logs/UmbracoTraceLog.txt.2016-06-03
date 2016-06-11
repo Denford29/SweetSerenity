@@ -1,0 +1,4 @@
+﻿2016-06-03 11:06:16,079 [10] INFO  umbraco.BusinessLogic.Log - [T115/D2] Log scrubbed.  Removed all items older than 2016-04-04 11:06:15
+2016-06-03 15:06:16,096 [10] INFO  umbraco.BusinessLogic.Log - [T174/D2] Log scrubbed.  Removed all items older than 2016-04-04 15:06:16
+2016-06-03 19:06:16,114 [10] INFO  umbraco.BusinessLogic.Log - [T166/D2] Log scrubbed.  Removed all items older than 2016-04-04 19:06:16
+2016-06-03 23:06:16,136 [10] INFO  umbraco.BusinessLogic.Log - [T176/D2] Log scrubbed.  Removed all items older than 2016-04-04 23:06:16

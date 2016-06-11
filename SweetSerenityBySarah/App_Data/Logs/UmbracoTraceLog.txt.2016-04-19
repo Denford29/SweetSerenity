@@ -1,0 +1,829 @@
+﻿2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [LogScrubber] Terminating
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [LogScrubber] Waiting for tasks to complete
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [LogScrubber] Tasks completed, terminated
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledTasks] Terminating
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledTasks] Waiting for tasks to complete
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledTasks] Tasks completed, terminated
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledPublishing] Terminating
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledPublishing] Waiting for tasks to complete
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [ScheduledPublishing] Tasks completed, terminated
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [XmlCacheFilePersister] Terminating
+2016-04-19 00:00:29,529 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T38/D2] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-04-19 00:00:29,545 [10] INFO  umbraco.content - [T11/D2] Save Xml to file...
+2016-04-19 00:00:29,545 [10] INFO  umbraco.content - [T30/D2] Saved Xml to file.
+2016-04-19 00:00:29,560 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T33/D2] [XmlCacheFilePersister] Tasks completed, terminated
+2016-04-19 00:00:29,623 [10] INFO  Umbraco.Core.UmbracoApplicationBase - [T38/D2] Application shutdown. Reason: BuildManagerChange
+2016-04-19 00:02:09,045 [21] INFO  Umbraco.Core.CoreBootManager - [T19/D3] Umbraco application starting
+2016-04-19 00:02:09,060 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Determining hash of code files on disk
+2016-04-19 00:02:09,076 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Hash determined (took 5ms)
+2016-04-19 00:02:09,076 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2016-04-19 00:02:09,092 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 42 (took 19ms)
+2016-04-19 00:02:09,170 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2016-04-19 00:02:09,170 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2016-04-19 00:02:09,170 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2016-04-19 00:02:09,170 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 5ms)
+2016-04-19 00:02:09,185 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2016-04-19 00:02:09,185 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 6 (took 1ms)
+2016-04-19 00:02:09,185 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2016-04-19 00:02:09,185 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 3ms)
+2016-04-19 00:02:09,264 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2016-04-19 00:02:09,264 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 2ms)
+2016-04-19 00:02:09,264 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2016-04-19 00:02:09,264 [21] INFO  Umbraco.Core.PluginManager - [T19/D3] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2016-04-19 00:02:09,889 [21] INFO  Umbraco.Web.Search.ExamineEvents - [T19/D3] Initializing Examine and binding to business logic events
+2016-04-19 00:02:09,982 [21] INFO  Umbraco.Web.Search.ExamineEvents - [T19/D3] Adding examine event handlers for index providers: 3
+2016-04-19 00:02:10,029 [21] INFO  umbraco.content - [T19/D3] Load Xml from file...
+2016-04-19 00:02:10,029 [21] INFO  umbraco.content - [T19/D3] Loaded Xml from file.
+2016-04-19 00:02:10,045 [21] INFO  Umbraco.Core.CoreBootManager - [T19/D3] Umbraco application startup complete (took 996ms)
+2016-04-19 00:02:10,154 [21] INFO  Umbraco.Web.UmbracoModule - [T38/D3] Setting OriginalRequestUrl: blog.masteringworld.com/umbraco
+2016-04-19 00:05:21,000 [21] INFO  Umbraco.Core.PluginManager - [T23/D3] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2016-04-19 00:05:21,000 [21] INFO  Umbraco.Core.PluginManager - [T23/D3] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 1ms)
+2016-04-19 00:05:21,608 [21] INFO  Umbraco.Core.PluginManager - [T23/D3] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2016-04-19 00:05:21,608 [21] INFO  Umbraco.Core.PluginManager - [T23/D3] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 2ms)
+2016-04-19 00:06:26,752 [21] INFO  umbraco.BusinessLogic.Log - [T23/D3] Log scrubbed.  Removed all items older than 2016-02-19 00:06:26
+2016-04-19 00:06:28,049 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T37/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:06:29,189 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T36/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:07:30,318 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T36/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:08:31,463 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T36/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:09:32,620 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:10:33,745 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:11:27,858 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:11:34,875 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:12:36,020 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T20/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:13:37,148 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:14:38,282 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:15:39,411 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T20/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:16:27,871 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:16:40,530 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:17:41,642 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:18:42,761 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:19:43,904 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:20:45,032 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:21:27,867 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T10/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:21:46,182 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:22:47,341 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:23:48,476 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:24:49,588 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:25:50,717 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:26:27,891 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T34/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:26:51,969 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:27:53,205 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:28:54,317 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:29:55,446 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:30:56,559 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:31:27,923 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:31:57,693 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:32:58,788 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:33:59,961 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:35:01,093 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:36:02,223 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:36:27,881 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:37:03,464 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:38:04,595 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:39:05,755 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:40:06,887 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:41:08,048 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:41:27,912 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T10/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:42:09,166 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:43:10,293 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:44:11,407 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:45:12,521 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:46:13,650 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:46:27,916 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:47:14,779 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:48:15,894 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:49:17,118 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:50:18,231 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:51:19,436 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:51:28,016 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:52:20,600 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:53:21,731 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:54:22,858 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:55:24,281 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:56:25,390 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:56:27,953 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T17/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 00:57:26,517 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:58:27,627 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 00:59:28,740 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:00:29,870 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:01:28,123 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T34/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 01:01:31,092 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:02:32,205 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:03:33,316 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:04:34,431 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:05:35,558 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:06:27,967 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T11/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 01:06:36,686 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:07:37,851 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T11/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:08:38,963 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T10/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:09:40,092 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:10:41,219 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:11:28,004 [21] ERROR Umbraco.Web.Scheduling.KeepAlive - [T34/D3] Error in ping. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at System.Net.WebClient.DownloadString(String address)
+   at Umbraco.Web.Scheduling.KeepAlive.Start(ApplicationContext appContext, IUmbracoSettingsSection settings)
+2016-04-19 01:11:42,379 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:12:43,520 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T34/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:13:44,649 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T22/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:14:45,775 [21] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - [T17/D3] An error occurred with the scheduled publishing. The base url used in the request was: https://blog.masteringworld.com/umbraco/, see http://our.umbraco.org/documentation/Using-Umbraco/Config-files/umbracoSettings/#ScheduledTasks documentation for details on setting a baseUrl if this is in error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 52.58.113.153:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   at System.Net.WebClient.UploadString(Uri address, String method, String data)
+   at System.Net.WebClient.UploadString(String address, String data)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.PerformRun()
+2016-04-19 01:14:47,775 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [XmlCacheFilePersister] Terminating
+2016-04-19 01:14:47,775 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-04-19 01:14:47,775 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledTasks] Terminating
+2016-04-19 01:14:47,775 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledTasks] Waiting for tasks to complete
+2016-04-19 01:14:47,775 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledTasks] Tasks completed, terminated
+2016-04-19 01:14:47,963 [21] INFO  umbraco.content - [T16/D3] Save Xml to file...
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledPublishing] Terminating
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledPublishing] Waiting for tasks to complete
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [ScheduledPublishing] Tasks completed, terminated
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [LogScrubber] Terminating
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [LogScrubber] Waiting for tasks to complete
+2016-04-19 01:14:47,978 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T22/D3] [LogScrubber] Tasks completed, terminated
+2016-04-19 01:14:47,994 [21] INFO  umbraco.content - [T33/D3] Saved Xml to file.
+2016-04-19 01:14:47,994 [21] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T11/D3] [XmlCacheFilePersister] Tasks completed, terminated
+2016-04-19 01:14:48,103 [21] INFO  Umbraco.Core.UmbracoApplicationBase - [T10/D3] Application shutdown. Reason: HostingEnvironment
+2016-04-19 01:19:02,290 [14] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application starting
+2016-04-19 01:19:02,790 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Determining hash of code files on disk
+2016-04-19 01:19:02,962 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Hash determined (took 160ms)
+2016-04-19 01:19:02,962 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2016-04-19 01:19:02,993 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 42 (took 23ms)
+2016-04-19 01:19:03,337 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2016-04-19 01:19:03,337 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+2016-04-19 01:19:03,337 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2016-04-19 01:19:03,384 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 41ms)
+2016-04-19 01:19:03,399 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2016-04-19 01:19:03,415 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 6 (took 1ms)
+2016-04-19 01:19:03,415 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2016-04-19 01:19:03,415 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 4ms)
+2016-04-19 01:19:03,462 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2016-04-19 01:19:03,462 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2016-04-19 01:19:03,462 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2016-04-19 01:19:03,462 [14] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2016-04-19 01:19:17,197 [14] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Initializing Examine and binding to business logic events
+2016-04-19 01:19:18,259 [14] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Adding examine event handlers for index providers: 3
+2016-04-19 01:19:21,587 [14] INFO  umbraco.content - [T1/D2] Load Xml from file...
+2016-04-19 01:19:21,728 [14] INFO  umbraco.content - [T1/D2] Loaded Xml from file.
+2016-04-19 01:19:21,743 [14] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application startup complete (took 19446ms)
+2016-04-19 01:19:22,493 [14] INFO  Umbraco.Web.UmbracoModule - [T9/D2] Setting OriginalRequestUrl: sweetserenitybysarah.com.au:443/umbraco
+2016-04-19 01:19:23,806 [14] INFO  Umbraco.Core.PluginManager - [T13/D2] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2016-04-19 01:19:23,806 [14] INFO  Umbraco.Core.PluginManager - [T13/D2] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 1ms)
+2016-04-19 01:19:26,728 [14] INFO  Umbraco.Core.PluginManager - [T8/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2016-04-19 01:19:26,728 [14] INFO  Umbraco.Core.PluginManager - [T8/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 1ms)
+2016-04-19 01:20:57,462 [14] INFO  umbraco.BusinessLogic.Log - [T9/D2] Log scrubbed.  Removed all items older than 2016-02-19 01:20:57
+2016-04-19 05:20:57,464 [14] INFO  umbraco.BusinessLogic.Log - [T25/D2] Log scrubbed.  Removed all items older than 2016-02-19 05:20:57
+2016-04-19 09:20:57,480 [14] INFO  umbraco.BusinessLogic.Log - [T34/D2] Log scrubbed.  Removed all items older than 2016-02-19 09:20:57
+2016-04-19 13:20:57,496 [14] INFO  umbraco.BusinessLogic.Log - [T50/D2] Log scrubbed.  Removed all items older than 2016-02-19 13:20:57
+2016-04-19 17:20:57,510 [14] INFO  umbraco.BusinessLogic.Log - [T58/D2] Log scrubbed.  Removed all items older than 2016-02-19 17:20:57
+2016-04-19 21:20:57,512 [14] INFO  umbraco.BusinessLogic.Log - [T61/D2] Log scrubbed.  Removed all items older than 2016-02-19 21:20:57

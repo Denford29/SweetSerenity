@@ -720,7 +720,9 @@
     <Content Include="Config\tinyMceConfig.config" />
     <Content Include="Config\trees.config" />
     <Content Include="Config\umbracoSettings.config" />
-    <Content Include="Config\UrlRewriting.config" />
+    <Content Include="Config\UrlRewriting.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Css\blueimp-gallery.min.css" />
     <Content Include="Css\bootstrap-image-gallery.css" />
     <Content Include="Css\bootstrap.css" />
@@ -731,7 +733,6 @@
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\Josefin_Sans\OFL.txt" />
     <Content Include="fonts\Open_Sans\LICENSE.txt" />
-    <Content Include="google580741c516edc2bf.html" />
     <Content Include="Images\60 Day Logo.jpg" />
     <Content Include="Images\AllAloeVeraDrinks.png" />
     <Content Include="Images\AloeVeraDrink.jpg" />
@@ -739,7 +740,6 @@
     <Content Include="Images\AloeVeraPlant.jpg" />
     <Content Include="Images\Aloe_Drinks.jpg" />
     <Content Include="Images\Aloe_Drinks.png" />
-    <Content Include="Images\bamboo-orchid.png" />
     <Content Include="Images\Feathered signature ORIGINAL %282%29.jpg" />
     <Content Include="Images\ForeverBird.jpg" />
     <Content Include="Images\ForeverBird.png" />
@@ -748,20 +748,9 @@
     <Content Include="Images\foreverLogo.png" />
     <Content Include="Images\headerImage.jpg" />
     <Content Include="Images\massage.jpg" />
-    <Content Include="Images\orchid.png" />
     <Content Include="Images\Site-Background.jpg" />
     <Content Include="Images\Sugaring.jpg" />
     <Content Include="Images\SugaringRoom.jpg" />
-    <Content Include="Images\sugaringStages.jpg" />
-    <Content Include="Images\Sweet Serenity by Sarah final 1.jpg" />
-    <Content Include="Images\Sweet Serenity by Sarah final 2.jpg" />
-    <Content Include="Images\Sweet Serenity by Sarah final 3.jpg" />
-    <Content Include="Images\Sweet Serenity by Sarah final 4.jpg" />
-    <Content Include="Images\Sweet Serenity by Sarah final 5.jpg" />
-    <Content Include="Images\Sweet-Serenity-By-Sarah-Logo-1.jpg" />
-    <Content Include="Images\Sweet-Serenity-By-Sarah-Logo-1.png" />
-    <Content Include="Images\Sweet-Serenity-By-Sarah-Logo.jpg" />
-    <Content Include="Images\Sweet-Serenity-By-Sarah-Logo.png" />
     <Content Include="Media\1001\foreverlivingproducts.jpg" />
     <Content Include="Media\1002\massage.jpg" />
     <Content Include="Media\1003\sugaring.jpg" />
@@ -809,20 +798,7 @@
     <Content Include="Media\1021\img-20150614-wa0012.jpg" />
     <Content Include="Media\1021\img-20150614-wa0012_big-thumb.jpg" />
     <Content Include="Media\1021\img-20150614-wa0012_thumb.jpg" />
-    <Content Include="Media\1022\orchid.png" />
-    <Content Include="Media\1022\orchid_thumb.jpg" />
-    <Content Include="Media\1023\bamboo-orchid.png" />
-    <Content Include="Media\1023\bamboo-orchid_thumb.jpg" />
-    <Content Include="Media\1024\sweet-serenity-by-sarah-logo.jpg" />
-    <Content Include="Media\1024\sweet-serenity-by-sarah-logo_thumb.jpg" />
-    <Content Include="Media\1025\sweet-serenity-by-sarah-logo-1.jpg" />
-    <Content Include="Media\1025\sweet-serenity-by-sarah-logo-1_thumb.jpg" />
-    <Content Include="Media\1026\sweet-serenity-by-sarah-logo.png" />
-    <Content Include="Media\1026\sweet-serenity-by-sarah-logo_thumb.jpg" />
-    <Content Include="Media\1027\sweet-serenity-by-sarah-logo-1.png" />
-    <Content Include="Media\1027\sweet-serenity-by-sarah-logo-1_thumb.jpg" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="robots.txt" />
     <Content Include="Scripts\blueimp-gallery.min.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\bootstrap-image-gallery.min.js" />
@@ -1100,8 +1076,6 @@
     <Content Include="Views\Partials\Gallery\ViewAllImages.cshtml" />
     <Content Include="Views\Partials\Master\shopLinks.cshtml" />
     <Content Include="Views\PricesPage.cshtml" />
-    <Content Include="Views\Sitemap.cshtml" />
-    <None Include="web.backup.1444209675.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3684,7 +3658,10 @@
       <DependentUpon>PostInstall.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Controllers\AccountSurfaceController.cs" />
     <Compile Include="Controllers\ContactSurfaceController.cs" />
+    <Compile Include="Models\AccountLoginModel.cs" />
+    <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />

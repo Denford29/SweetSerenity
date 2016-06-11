@@ -1,0 +1,43 @@
+﻿@using System.Web.Configuration
+@inherits UmbracoTemplatePage
+@{
+    var useSsl = false;
+    if (WebConfigurationManager.AppSettings["umbracoUseSSL"] != null &&
+        !string.IsNullOrWhiteSpace(WebConfigurationManager.AppSettings["umbracoUseSSL"]))
+    {
+        var configValue = WebConfigurationManager.AppSettings["umbracoUseSSL"];
+        if(String.Equals(configValue, "true", StringComparison.OrdinalIgnoreCase) )
+        {
+            useSsl = true;
+        }
+
+        if (useSsl)
+        {
+        var context = HttpContext.Current;
+
+        var builder = new UriBuilder(new Uri(context.Request.Url, context.Request.RawUrl))
+        {
+            Scheme = Uri.UriSchemeHttps
+        };
+
+        // Strip default HTTP port.
+        if (builder.Port == 80)
+            {
+            builder.Port = -1;
+            }
+			
+		context.Response.RedirectPermanent(builder.Uri.AbsoluteUri);
+			
+       @* if (builder.Uri.Host == "sweetserenitybysarah.com")
+            {
+                var urlPath = builder.Scheme + "://sweetserenitybysarah.com.au" + builder.Uri.AbsolutePath;
+                context.Response.RedirectPermanent(urlPath);
+            }
+            else
+            {
+            context.Response.RedirectPermanent(builder.Uri.AbsoluteUri);
+            }
+        *@
+        }
+    }
+}
