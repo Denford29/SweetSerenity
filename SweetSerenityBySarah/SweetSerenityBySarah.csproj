@@ -1076,6 +1076,10 @@
     <Content Include="Views\Partials\Gallery\ViewAllImages.cshtml" />
     <Content Include="Views\Partials\Master\shopLinks.cshtml" />
     <Content Include="Views\PricesPage.cshtml" />
+    <Content Include="Views\LoginRegisterPage.cshtml" />
+    <Content Include="Views\Sitemap.cshtml" />
+    <Content Include="Views\Partials\Account\Login.cshtml" />
+    <Content Include="Views\Partials\Account\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

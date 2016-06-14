@@ -14,10 +14,10 @@ namespace SweetSerenityBySarah.Controllers
     public class AccountSurfaceController : SurfaceController
         {
 
-        //public ActionResult Register()
-        //{
-        //return PartialView("Account/Login.");
-        //}
+        public ActionResult Register()
+            {
+            return PartialView("Account/Register");
+            }
 
         [HttpPost]
         public ActionResult RegisterSubmit(AccountRegisterModel registerModel)
@@ -40,20 +40,28 @@ namespace SweetSerenityBySarah.Controllers
                     }
                 else
                     {
-                    var member = membershipService.CreateMember(registerModel.Email.Trim(), registerModel.Email.Trim(),
-                        registerModel.Name.Trim(), "Member");
+                    var member = membershipService.CreateMember(
+                        registerModel.Email.Trim(),
+                        registerModel.Email.Trim(),
+                        registerModel.Name.Trim(),
+                        "Member");
                     if (member != null)
                         {
                         //Assign custom properties
-                        member.SetValue("name", registerModel.Name.Trim());
+                        member.SetValue("fullName", registerModel.Name.Trim());
                         member.SetValue("email", registerModel.Email.Trim());
                         member.IsApproved = false;
                         membershipService.Save(member);
                         membershipService.AssignRole(member.Id, "Site Users");
                         membershipService.SavePassword(member, registerModel.Password.Trim());
 
-                        var mailBody = "Thank you for registering on RDM Online and a member of the team will get back to you once you account is activated .<br />Regards,<br />Website Team";
-                        var userEmailMessage = new MailMessage { Subject = "Your Registration on RDM Online", Body = mailBody, From = new MailAddress("support@rdmonline.co.uk", "Web Team") };
+                        var mailBody = "Thank you for registering on Sweet Serenity by Sarah and a member of the team will get back to you once you account is activated .<br />Regards,<br />Website Team";
+                        var userEmailMessage = new MailMessage
+                        {
+                            Subject = "Your Registration on Sweet Serenity by Sarah",
+                            Body = mailBody,
+                            From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                        };
                         userEmailMessage.To.Add(new MailAddress(registerModel.Email, registerModel.Name));
                         userEmailMessage.IsBodyHtml = true;
                         var userSmtpClient = new SmtpClient();
@@ -65,8 +73,14 @@ namespace SweetSerenityBySarah.Controllers
                         adminMailBody += "Email Address : " + registerModel.Email.Trim() + "<br />";
                         adminMailBody += "Regards, <br />Website Team";
 
-                        var adminEmail = new MailMessage { Subject = "The registration form submited on RDM Online", Body = adminMailBody, From = new MailAddress("support@rdmonline.co.uk", "Web Team") };
-                        adminEmail.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
+                        var adminEmail = new MailMessage
+                        {
+                            Subject = "The registration form submited on Sweet Serenity by Sarah",
+                            Body = adminMailBody,
+                            From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                        };
+                        adminEmail.To.Add(new MailAddress("sarahbelletty@yahoo.co.uk", "Sarah"));
+                        adminEmail.Bcc.Add("denfordmutseriwa@yahoo.com");
                         adminEmail.IsBodyHtml = true;
                         var adminSmtpClient = new SmtpClient();
                         adminSmtpClient.Send(adminEmail);
@@ -81,10 +95,10 @@ namespace SweetSerenityBySarah.Controllers
                 }
             }
 
-        //public ActionResult Login()
-        //{
-        //return PartialView("Account/Login.");
-        //}
+        public ActionResult Login()
+            {
+            return PartialView("Account/Login");
+            }
 
         [HttpPost]
         public ActionResult LoginSubmit(AccountLoginModel loginModel)

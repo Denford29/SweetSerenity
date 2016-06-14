@@ -89,7 +89,7 @@
                         </li>
                         @if (homePage.Children.Any())
                             {
-                            foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu")))
+                            foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu") && childPage.DocumentTypeAlias != "LoginRegisterPage"))
                                 {
                                 var pageTitle = landingPage.Name;
                                 if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
@@ -124,16 +124,21 @@
                             }
                         else
                             {
-                            <li>
-                                <a href="#" title="Login - @siteDefaultName">
-                                    Login
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Register - @siteDefaultName">
-                                    Register
-                                </a>
-                            </li>
+                            var loginRegisterPage = homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu") && childPage.DocumentTypeAlias == "LoginRegisterPage").ToList().FirstOrDefault();
+
+                            if (loginRegisterPage != null && loginRegisterPage.Id > 0)
+                                {
+                                var pageTitle = loginRegisterPage.Name;
+                                if (loginRegisterPage.HasProperty("linkTittle") && loginRegisterPage.HasValue("linkTittle"))
+                                    {
+                                    pageTitle = loginRegisterPage.GetPropertyValue("linkTittle").ToString();
+                                    }
+                                <li @(loginRegisterPage.Id == Model.Content.Id ? "class=active" : null)>
+                                    <a href="@loginRegisterPage.Url" title="@pageTitle - @siteDefaultName">
+                                        @pageTitle
+                                    </a>
+                                </li>
+                                }
                             }
 
                     </ul>
