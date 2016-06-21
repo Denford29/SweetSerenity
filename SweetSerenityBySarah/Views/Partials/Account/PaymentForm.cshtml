@@ -1,0 +1,60 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    <hr>
+    <h4 class="intro-text text-center">
+        Payment Details...
+    </h4>
+    <hr>
+
+    using (Html.BeginUmbracoForm("LoginSubmit", "AccountSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
+        {
+        <div id="cardInformation" class="cardInformation">
+            <section id="validationError" class="alert alert-danger">
+                <a class="close" data-dismiss="alert" href="#">x</a>
+            </section>
+
+            <div class="form-group CardholdersNameSection">
+                <label class="control-label col-sm-4" for="CardholdersName">
+                    Card name
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" id="CardholdersName" name="CardholdersName" required class="form-control" placeholder="Enter your name as it appears on the card" />
+                </div>
+            </div>
+
+            <div class="form-group CardNumberSection">
+                <label class="control-label col-sm-4" for="CardNumber">
+                    Card number
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" id="CardNumber" name="CardNumber" required class="form-control cc-number" autocomplete="off" placeholder="Enter the long card number" />
+                </div>
+            </div>
+
+            <div class="form-group CardExpiryDateSection">
+                <label class="control-label col-sm-4" for="CardExpiryDate">
+                    Expiry date
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" id="CardExpiryDate" name="CardExpiryDate" required class="form-control cc-exp" autocomplete="off" placeholder="Cards expiry date e.g 03 / 17" />
+                </div>
+            </div>
+
+            <div class="form-group CardCCVSection">
+                <label class="control-label col-sm-4" for="CardCCV">
+                    Security Code
+                </label>
+                <div class="col-sm-8">
+                    <span class="faint-small menuTooltip" style="margin-top: 0; width: 125px;" data-original-title="This is the 3 digit code on the back of your card. For AmEx, it's the 4 digit code on the front" data-toggle="tooltip">
+                        <input type="text" id="CardCCV" name="CardCCV" required class="form-control cc-cvc" autocomplete="off" placeholder="Security code" />
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group col-sm-12 text-center">
+                @*<button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment" onclick="$('#cardDetailsForm').trigger('submit');">Proccess Payment</button>*@
+                <button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment" >Proccess Payment</button>
+            </div>
+        </div>
+        }
+}

@@ -1,56 +1,75 @@
 ﻿@model SweetSerenityBySarah.Models.AccountRegisterModel
 @{
-    using (Html.BeginUmbracoForm("RegisterSubmit", "AccountSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "registerForm" }))
-        {
 
+    if (TempData.ContainsKey("registerSuccess"))
+        {
         <hr>
         <h4 class="intro-text text-center">
-            Register for an account...
+            Account created...
         </h4>
         <hr>
 
-        if (TempData.ContainsKey("registerError"))
+        var successMessage = (string)TempData["registerSuccess"];
+        <div role="alert" class="alert alert-success alert-dismissible fade in">
+            <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>@Html.Raw(successMessage)</p>
+        </div>
+        }
+    else
+        {
+        using (Html.BeginUmbracoForm("RegisterSubmit", "AccountSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "registerForm" }))
             {
-            var errorMessage = (string)TempData["registerError"];
-            <div role="alert" class="alert alert-danger alert-dismissible fade in">
-                <button aria-label="Close" data-dismiss="alert" class="close" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <p>@Html.Raw(errorMessage)</p>
-            </div>
+            <hr>
+            <h4 class="intro-text text-center">
+                Register for an account...
+            </h4>
+            <hr>
+
+            if (TempData.ContainsKey("registerError"))
+                {
+                var errorMessage = (string)TempData["registerError"];
+                <div role="alert" class="alert alert-danger alert-dismissible fade in">
+                    <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>@Html.Raw(errorMessage)</p>
+                </div>
+                }
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                </div>
             }
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary("", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(m => m.Name, new { @class = "col-md-3 control-label" })
-                <div class="col-md-9">
-                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", required = "" })
-                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label" })
-                <div class="col-md-9">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", required = "" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
-                <div class="col-md-9">
-                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", required = "" })
-                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-3 control-label" })
-                <div class="col-md-9">
-                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", required = "" })
-                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary btn-lg">Register</button>
-            </div>
         }
 }

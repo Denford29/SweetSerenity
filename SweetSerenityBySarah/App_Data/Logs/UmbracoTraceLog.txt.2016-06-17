@@ -1,0 +1,18 @@
+﻿2016-06-17 02:14:56,689 [163] INFO  umbraco.BusinessLogic.Log - [T5/D7] Log scrubbed.  Removed all items older than 2016-04-18 02:14:56
+2016-06-17 06:14:56,703 [163] INFO  umbraco.BusinessLogic.Log - [T37/D7] Log scrubbed.  Removed all items older than 2016-04-18 06:14:56
+2016-06-17 10:14:56,727 [163] INFO  umbraco.BusinessLogic.Log - [T27/D7] Log scrubbed.  Removed all items older than 2016-04-18 10:14:56
+2016-06-17 12:02:22,334 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledPublishing] Terminating
+2016-06-17 12:02:22,334 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledPublishing] Waiting for tasks to complete
+2016-06-17 12:02:22,350 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledPublishing] Tasks completed, terminated
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [XmlCacheFilePersister] Terminating
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [LogScrubber] Terminating
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [LogScrubber] Waiting for tasks to complete
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [LogScrubber] Tasks completed, terminated
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledTasks] Terminating
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledTasks] Waiting for tasks to complete
+2016-06-17 12:02:22,662 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T24/D7] [ScheduledTasks] Tasks completed, terminated
+2016-06-17 12:02:22,678 [163] INFO  umbraco.content - [T168/D7] Save Xml to file...
+2016-06-17 12:02:22,678 [163] INFO  umbraco.content - [T18/D7] Saved Xml to file.
+2016-06-17 12:02:22,693 [163] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T14/D7] [XmlCacheFilePersister] Tasks completed, terminated
+2016-06-17 12:02:22,787 [163] INFO  Umbraco.Core.UmbracoApplicationBase - [T25/D7] Application shutdown. Reason: HostingEnvironment

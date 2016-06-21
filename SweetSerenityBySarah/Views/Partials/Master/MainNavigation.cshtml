@@ -89,7 +89,10 @@
                         </li>
                         @if (homePage.Children.Any())
                             {
-                            foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu") && childPage.DocumentTypeAlias != "LoginRegisterPage"))
+                            foreach (var landingPage in homePage.Children.Where(
+                                    childPage => childPage.IsVisible() && 
+                                    !childPage.GetPropertyValue<bool>("hideFromMenu") && 
+                                    childPage.DocumentTypeAlias != "LoginRegisterPage" ))
                                 {
                                 var pageTitle = landingPage.Name;
                                 if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
@@ -112,14 +115,19 @@
                             var haveUser = HttpContext.Current.User.Identity.IsAuthenticated;
                             if (haveUser && currentMember != null)
                                 {
-                                using (Html.BeginForm("LogoutUser", "AccountSurface", FormMethod.Post, new { role = "form" }))
-                                    {
-                                    <li>
-                                        <a href="#" title="Logout - @siteDefaultName">
-                                            Logout
-                                        </a>
-                                    </li>
-                                    }
+                                <li>
+                                    <a title="Logout - @siteDefaultName" onclick="logoutFormSubmit()">
+                                        Logout
+                                        @using (Html.BeginForm("LogoutUser", "AccountSurface", FormMethod.Post, new { role = "form", id = "logoutForm" }))
+                                            {
+                                            }
+                                        <script language="javascript" type="text/javascript">
+                                            function logoutFormSubmit() {
+                                                $("#logoutForm").submit();
+                                            }
+                                        </script>
+                                    </a>
+                                </li>
                                 }
                             }
                         else

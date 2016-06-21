@@ -85,8 +85,9 @@ namespace SweetSerenityBySarah.Controllers
                         var adminSmtpClient = new SmtpClient();
                         adminSmtpClient.Send(adminEmail);
 
-                        return Redirect("/");
-                        //Response.Redirect("/");
+                        TempData["registerSuccess"] = "Your account has been created successfully, a member of the team will let you know once its active.";
+                        return CurrentUmbracoPage();
+                        //return Redirect("/");
                         }
                     TempData["registerError"] = "Opps... Registration Error, we cannot create your account at the moment, please try again later.";
                     //return RedirectToCurrentUmbracoPage();
@@ -118,10 +119,10 @@ namespace SweetSerenityBySarah.Controllers
                     FormsAuthentication.SetAuthCookie(loginModel.Email, loginModel.RememberMe);
                     if (homepage != null && homepage.Id > 0)
                         {
-                        var myWorldPage = homepage.Descendants("MyWorld").FirstOrDefault();
-                        if (myWorldPage != null && myWorldPage.Id > 0)
+                        var accountPage = homepage.Descendants("AccountPage").FirstOrDefault();
+                        if (accountPage != null && accountPage.Id > 0)
                             {
-                            return Redirect(myWorldPage.Url);
+                            return Redirect(accountPage.Url);
                             }
                         else
                             {

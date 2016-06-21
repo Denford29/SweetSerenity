@@ -23,8 +23,7 @@
         <script src="/Scripts/html5shiv.min.js"></script>
         <script src="/Scripts/respond.min.js"></script>
     <![endif]-->
-		
-	@*@Html.Partial("Master/UrlRedirect")*@
+    @*@Html.Partial("Master/UrlRedirect")*@
 
 </head>
 <body>
@@ -35,16 +34,18 @@
 
     @Html.Partial("Master/SiteFooter")
 
-    @*<script type="text/javascript" src="/Scripts/jQuery-v1.11.2.js"></script>
+    <script type="text/javascript" src="/Scripts/jQuery-v1.11.2.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery.validate.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/Scripts/blueimp-gallery.min.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap-image-gallery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/SiteJQScripts.js"></script>*@
+    <script type="text/javascript" src="/Scripts/jquery.payment.js"></script>
+    <script type="text/javascript" src="/Scripts/jQuery.Spin.js"></script>
+    <script type="text/javascript" src="/Scripts/SiteJQScripts.js"></script>
 
-    @Scripts.Render("~/bundles/sitescripts")
+    @*@Scripts.Render("~/bundles/sitescripts")*@
 
     @RenderSection("footerScripts", false)
 

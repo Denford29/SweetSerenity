@@ -203,6 +203,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\SQLCE4Umbraco.dll</HintPath>
     </Reference>
+    <Reference Include="Stripe.net, Version=6.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Stripe.net.dll</HintPath>
+    </Reference>
     <Reference Include="SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\SweetSerenityBySarah.dll</HintPath>
@@ -681,7 +685,6 @@
     <Content Include="bin\Google.Apis.dll" />
     <Content Include="bin\Google.Apis.PlatformServices.dll" />
     <Content Include="bin\InfoCaster.Umbraco.UrlTracker.dll" />
-    <Content Include="bin\InfoCaster.Umbraco.UrlTracker.pdb" />
     <Content Include="bin\JavaScriptEngineSwitcher.Core.dll" />
     <Content Include="bin\JavaScriptEngineSwitcher.Msie.dll" />
     <Content Include="bin\MsieJavaScriptEngine.dll" />
@@ -692,13 +695,12 @@
     <Content Include="bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll" />
     <Content Include="bin\ru-ru\MsieJavaScriptEngine.resources.dll" />
     <Content Include="bin\Skybrud.Social.dll" />
+    <Content Include="bin\Stripe.net.dll" />
+    <Content Include="bin\Stripe.net.pdb" />
     <Content Include="bin\System.Web.Optimization.dll" />
     <Content Include="bin\Umbraco.Forms.Core.dll" />
-    <Content Include="bin\Umbraco.Forms.Core.pdb" />
     <Content Include="bin\Umbraco.Forms.Core.Providers.dll" />
-    <Content Include="bin\Umbraco.Forms.Core.Providers.pdb" />
     <Content Include="bin\Umbraco.Forms.Web.dll" />
-    <Content Include="bin\Umbraco.Forms.Web.pdb" />
     <Content Include="bin\Umbraco.Forms.Web.XmlSerializers.dll" />
     <Content Include="bin\Umbraco.Licensing.dll" />
     <Content Include="bin\WebGrease.dll" />
@@ -805,6 +807,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\html5shiv.min.js" />
     <Content Include="Scripts\jQuery-v1.11.2.js" />
+    <Content Include="Scripts\jquery.payment.js" />
+    <Content Include="Scripts\jQuery.Spin.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -1080,6 +1084,9 @@
     <Content Include="Views\Sitemap.cshtml" />
     <Content Include="Views\Partials\Account\Login.cshtml" />
     <Content Include="Views\Partials\Account\Register.cshtml" />
+    <Content Include="Views\AccountPage.cshtml" />
+    <Content Include="Views\Partials\Account\PaymentForm.cshtml" />
+    <Content Include="Views\Partials\Account\PaymentsList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1125,13 +1132,10 @@
     <Content Include="bin\System.Data.SqlServerCe.dll" />
     <Content Include="bin\System.Data.SqlServerCe.Entity.dll" />
     <Content Include="bin\System.Net.Http.Formatting.dll" />
-    <Content Include="bin\System.Net.Http.Formatting.xml" />
     <Content Include="bin\System.Web.Helpers.dll" />
     <Content Include="bin\System.Web.Helpers.xml" />
     <Content Include="bin\System.Web.Http.dll" />
     <Content Include="bin\System.Web.Http.WebHost.dll" />
-    <Content Include="bin\System.Web.Http.WebHost.xml" />
-    <Content Include="bin\System.Web.Http.xml" />
     <Content Include="bin\System.Web.Mvc.dll" />
     <Content Include="bin\System.Web.Razor.dll" />
     <Content Include="bin\System.Web.Razor.xml" />
@@ -3664,6 +3668,7 @@
     </Compile>
     <Compile Include="Controllers\AccountSurfaceController.cs" />
     <Compile Include="Controllers\ContactSurfaceController.cs" />
+    <Compile Include="Controllers\PaymentSurfaceController.cs" />
     <Compile Include="Models\AccountLoginModel.cs" />
     <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Models\ContactModel.cs" />

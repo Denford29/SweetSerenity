@@ -1,0 +1,156 @@
+﻿@inherits UmbracoTemplatePage
+@section headerCss{
+}
+
+@{
+    Layout = "Master.cshtml";
+    var pageHeading = Model.Content.Name;
+    if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
+        {
+        pageHeading = Model.Content.GetPropertyValue("pageHeading").ToString();
+        }
+        <div class="container">
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="brand-name">
+                            @pageHeading
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            @Html.Partial("Master/HeadingImage")
+
+                            @if (Model.Content.HasProperty("bodyText") && Model.Content.HasValue("bodyText"))
+                                {
+                                <div class="col-lg-12">
+                                    @Html.Raw(Model.Content.GetPropertyValue("bodyText"))
+                                </div>
+                                }
+
+                            <div class="col-lg-12">
+                                @Html.Partial("Account/PaymentForm")
+                            </div>
+
+                                @Html.Partial("Account/PaymentsList")
+
+                            </div>
+                    </div>
+
+                    @Html.Partial("Master/SideNavigation")
+                </div>
+            </div>
+
+        </div>
+}
+
+@section footerScripts{
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script>
+        $("#validationError").hide();
+        $("#submitError").hide();
+
+        $('.cc-number').payment('formatCardNumber');
+        $('.cc-exp').payment('formatCardExpiry');
+        $('.cc-cvc').payment('formatCardCVC');
+
+        $('#processPayment').click(function() {
+            $('#cardDetailsForm').trigger('submit');
+        });
+
+        $('#cardDetailsForm').submit(function (event) {
+
+            var $form = $(this);
+            $form.find('#processPayment').prop('disabled', true);
+
+            $("#cardDetailsForm").validate({
+                CardholdersName: {
+                    required: true
+                },
+
+                CardNumber: {
+                    required: true
+                },
+
+                CardExpiryDate: {
+                    required: true
+                },
+
+                CardCCV: {
+                    required: true
+                },
+                errorPlacement: function (error, element) {
+                },
+                invalidHandler: function (event, validator) {
+                    var errors = validator.numberOfInvalids();
+                    if (errors) {
+                        var message = "<h4>Form error!</h4><p>We're sorry, there was a problem submitting your form. Please check the fields highlighted below to resolve any errors.</p>";
+                        $("#validationError").html(message);
+                        $("#validationError").show();
+                        $form.find('#processPayment').prop('disabled', false);
+                    }
+                    else {
+                        $("#validationError").hide();
+                        $form.find('#processPayment').prop('disabled', true);
+                    }
+                },
+                submitHandler: function () {
+                    $(window).spin();
+                    Stripe.setPublishableKey('pk_test_7mFtUZzbxDespYuEjpQPYzzi');
+                    var expireDate = $('#CardExpiryDate').val();
+                    var expireMonth = "";
+                    var expireYear = "";
+                    if (expireDate !== null) {
+                        var arr = expireDate.split('/');
+                        expireMonth = arr[0];
+                        expireYear = arr[1];
+                    }
+
+                    Stripe.card.createToken({
+                        number: $('#CardNumber').val(),
+                        cvc: $('.CardCCV').val(),
+                        exp_month: parseInt(expireMonth),
+                        exp_year: parseInt(expireYear)
+                    }, stripeResponseHandler);
+                }
+            });
+            return false;
+        });
+
+        function stripeResponseHandler(status, response) {
+
+            // Grab the form:
+            var $form = $('#cardDetailsForm');
+
+            if (response.error) { 
+
+                // Show the errors on the form
+                var message = "<h4>Form error!</h4><p>" + response.error.message + "</p>";
+                $("#validationError").html(message);
+                $("#validationError").show();
+                $form.find('#processPayment').prop('disabled', false);
+                $(window).spin();
+
+            } else {
+
+                // Get the token ID:
+                var token = response.id;
+
+                // Insert the token into the form so it gets submitted to the server:
+                $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+
+                // Submit the form:
+                $form.get(0).submit();
+                $(window).spin();
+            }
+        }
+    </script>
+
+}

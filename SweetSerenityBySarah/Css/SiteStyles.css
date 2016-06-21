@@ -84,6 +84,11 @@ a {
         border-color: #9E0301;
     }
 
+    input.error {
+        color: #9e0301;
+        border: 1px solid #9E0301;
+    }
+
 /* MASTER STYLES
 -------------------------------------------------- */
 .headerBox {
