@@ -1,9 +1,14 @@
-﻿@inherits UmbracoTemplatePage
+﻿@using SweetSerenityBySarah
+@inherits UmbracoTemplatePage
 @section headerCss{
 }
 
 @{
     Layout = "Master.cshtml";
+
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    var publishAPIKey = PaymentService.GetPublishApiKey(siteSetting);
+    
     var pageHeading = Model.Content.Name;
     if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
         {
@@ -83,7 +88,7 @@
                     required: true
                 },
 
-                CardCCV: {
+                CardCcv: {
                     required: true
                 },
                 errorPlacement: function (error, element) {
@@ -103,7 +108,7 @@
                 },
                 submitHandler: function () {
                     $(window).spin();
-                    Stripe.setPublishableKey('pk_test_7mFtUZzbxDespYuEjpQPYzzi');
+                    Stripe.setPublishableKey(@publishAPIKey);
                     var expireDate = $('#CardExpiryDate').val();
                     var expireMonth = "";
                     var expireYear = "";
@@ -144,7 +149,7 @@
                 var token = response.id;
 
                 // Insert the token into the form so it gets submitted to the server:
-                $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+                $form.append($('<input type="hidden" name="StripeToken" />').val(token));
 
                 // Submit the form:
                 $form.get(0).submit();

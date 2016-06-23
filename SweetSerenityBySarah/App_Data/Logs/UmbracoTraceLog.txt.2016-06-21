@@ -1,0 +1,17 @@
+﻿2016-06-21 02:00:04,435 [10] INFO  umbraco.BusinessLogic.Log - [T28/D2] Log scrubbed.  Removed all items older than 2016-04-22 02:00:04
+2016-06-21 06:00:04,459 [10] INFO  umbraco.BusinessLogic.Log - [T92/D2] Log scrubbed.  Removed all items older than 2016-04-22 06:00:04
+2016-06-21 08:53:33,850 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledTasks] Terminating
+2016-06-21 08:53:33,850 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledTasks] Waiting for tasks to complete
+2016-06-21 08:53:33,850 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledTasks] Tasks completed, terminated
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [XmlCacheFilePersister] Terminating
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledPublishing] Terminating
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledPublishing] Waiting for tasks to complete
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [ScheduledPublishing] Tasks completed, terminated
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [LogScrubber] Terminating
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [LogScrubber] Waiting for tasks to complete
+2016-06-21 08:53:34,390 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T77/D2] [LogScrubber] Tasks completed, terminated
+2016-06-21 08:53:34,406 [10] INFO  umbraco.content - [T12/D2] Save Xml to file...
+2016-06-21 08:53:34,421 [10] INFO  umbraco.content - [T82/D2] Saved Xml to file.
+2016-06-21 08:53:34,421 [10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T129/D2] [XmlCacheFilePersister] Tasks completed, terminated
+2016-06-21 08:53:34,515 [10] INFO  Umbraco.Core.UmbracoApplicationBase - [T79/D2] Application shutdown. Reason: HostingEnvironment
