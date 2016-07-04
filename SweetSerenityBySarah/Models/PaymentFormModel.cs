@@ -4,6 +4,10 @@ namespace SweetSerenityBySarah.Models
     {
     public class PaymentFormModel
         {
+        [Required(ErrorMessage = "Please enter the amount to pay.")]
+        [Display(Name = "Payment Amount")]
+        public decimal PaymentAmount { get; set; }
+
         [Required(ErrorMessage = "Please enter the card holders name")]
         [Display(Name = "Cardholders Name")]
         public string CardholdersName { get; set; }

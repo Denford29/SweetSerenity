@@ -8,7 +8,7 @@
 
     var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
     var publishAPIKey = PaymentService.GetPublishApiKey(siteSetting);
-    
+
     var pageHeading = Model.Content.Name;
     if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
         {
@@ -39,12 +39,13 @@
                                 }
 
                             <div class="col-lg-12">
+                                @*@Html.Action("PaymentForm", "PaymentSurface")*@
                                 @Html.Partial("Account/PaymentForm")
                             </div>
 
-                                @Html.Partial("Account/PaymentsList")
+                            @Html.Partial("Account/PaymentsList")
 
-                            </div>
+                        </div>
                     </div>
 
                     @Html.Partial("Master/SideNavigation")
@@ -56,24 +57,25 @@
 
 @section footerScripts{
 
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    @*<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
     <script>
         $("#validationError").hide();
         $("#submitError").hide();
+        //$('#processPayment').prop('disabled', false);
 
         $('.cc-number').payment('formatCardNumber');
         $('.cc-exp').payment('formatCardExpiry');
         $('.cc-cvc').payment('formatCardCVC');
 
-        $('#processPayment').click(function() {
+        $('#processPayment').click(function () {
             $('#cardDetailsForm').trigger('submit');
         });
 
         $('#cardDetailsForm').submit(function (event) {
 
             var $form = $(this);
-            $form.find('#processPayment').prop('disabled', true);
+            //$form.find('#processPayment').prop('disabled', true);
 
             $("#cardDetailsForm").validate({
                 CardholdersName: {
@@ -99,11 +101,11 @@
                         var message = "<h4>Form error!</h4><p>We're sorry, there was a problem submitting your form. Please check the fields highlighted below to resolve any errors.</p>";
                         $("#validationError").html(message);
                         $("#validationError").show();
-                        $form.find('#processPayment').prop('disabled', false);
+                        //$form.find('#processPayment').prop('disabled', false);
                     }
                     else {
                         $("#validationError").hide();
-                        $form.find('#processPayment').prop('disabled', true);
+                        //$form.find('#processPayment').prop('disabled', true);
                     }
                 },
                 submitHandler: function () {
@@ -120,7 +122,7 @@
 
                     Stripe.card.createToken({
                         number: $('#CardNumber').val(),
-                        cvc: $('.CardCCV').val(),
+                        cvc: $('#CardCcv').val(),
                         exp_month: parseInt(expireMonth),
                         exp_year: parseInt(expireYear)
                     }, stripeResponseHandler);
@@ -134,7 +136,7 @@
             // Grab the form:
             var $form = $('#cardDetailsForm');
 
-            if (response.error) { 
+            if (response.error) {
 
                 // Show the errors on the form
                 var message = "<h4>Form error!</h4><p>" + response.error.message + "</p>";
@@ -156,6 +158,5 @@
                 $(window).spin();
             }
         }
-    </script>
-
+    </script>*@
 }

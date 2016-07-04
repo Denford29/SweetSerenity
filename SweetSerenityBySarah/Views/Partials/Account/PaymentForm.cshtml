@@ -1,60 +1,93 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using SweetSerenityBySarah
+@using SweetSerenityBySarah.Models
+@inherits UmbracoTemplatePage
+@*@model SweetSerenityBySarah.Models.PaymentFormModel*@
 @{
+    
+    var model = new PaymentFormModel();
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    var publishAPIKey = PaymentService.GetPublishApiKey(siteSetting);
+    
     <hr>
     <h4 class="intro-text text-center">
         Payment Details...
     </h4>
     <hr>
 
-    using (Html.BeginUmbracoForm("ProcessPayment", "PaymentSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
+    using (Html.BeginUmbracoForm("ProcessPaymentForm", "PaymentSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
         {
-        <div id="cardInformation" class="cardInformation">
-            <section id="validationError" class="alert alert-danger">
-                <a class="close" data-dismiss="alert" href="#">x</a>
-            </section>
 
-            <div class="form-group CardholdersNameSection">
-                <label class="control-label col-sm-4" for="CardholdersName">
-                    Card name
-                </label>
-                <div class="col-sm-8">
-                    <input type="text" id="CardholdersName" name="CardholdersName" required class="form-control" placeholder="Enter your name as it appears on the card" />
-                </div>
+        <div class="form-group">
+            @Html.LabelFor(m => model.PaymentAmount, new { @class = "control-label col-sm-4" })
+
+            <div class="col-sm-4">
+                @Html.TextBoxFor(m => model.PaymentAmount, new {@class = "form-control", required = "", placeholder = "Enter the amount you wish to pay"})
+                @Html.ValidationMessageFor(m => model.PaymentAmount, "", new {@class = "text-danger"})
             </div>
 
-            <div class="form-group CardNumberSection">
-                <label class="control-label col-sm-4" for="CardNumber">
-                    Card number
-                </label>
-                <div class="col-sm-8">
-                    <input type="text" id="CardNumber" name="CardNumber" required class="form-control cc-number" autocomplete="off" placeholder="Enter the long card number" />
-                </div>
-            </div>
+            <div class="form-group col-sm-4 text-right">
+                <script src="https://checkout.stripe.com/checkout.js" 
+                        class="stripe-button"
+                        data-key="@publishAPIKey"
+                        data-amount="999"
+                        data-name="Sweet Serenity by Sarah"
+                        data-description="Widget"
+                        data-image="/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        data-currency="aud">
 
-            <div class="form-group CardExpiryDateSection">
-                <label class="control-label col-sm-4" for="CardExpiryDate">
-                    Expiry date
-                </label>
-                <div class="col-sm-8">
-                    <input type="text" id="CardExpiryDate" name="CardExpiryDate" required class="form-control cc-exp" autocomplete="off" placeholder="Cards expiry date e.g 03 / 17" />
-                </div>
-            </div>
-
-            <div class="form-group CardCCVSection">
-                <label class="control-label col-sm-4" for="CardCCV">
-                    Security Code
-                </label>
-                <div class="col-sm-8">
-                    <span class="faint-small menuTooltip" style="margin-top: 0; width: 125px;" data-original-title="This is the 3 digit code on the back of your card. For AmEx, it's the 4 digit code on the front" data-toggle="tooltip">
-                        <input type="text" id="CardCCV" name="CardCCV" required class="form-control cc-cvc" autocomplete="off" placeholder="Security code" />
-                    </span>
-                </div>
-            </div>
-
-            <div class="form-group col-sm-12 text-center">
-                @*<button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment" onclick="$('#cardDetailsForm').trigger('submit');">Proccess Payment</button>*@
-                <button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment" >Proccess Payment</button>
+                </script>
             </div>
         </div>
+
+        @*<div id="cardInformation" class="cardInformation">
+                <section id="validationError" class="alert alert-danger">
+                    <a class="close" data-dismiss="alert" href="#">x</a>
+                </section>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PaymentAmount, new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.PaymentAmount, new { @class = "form-control", required = "", placeholder = "Enter the amount you wish to pay" })
+                        @Html.ValidationMessageFor(m => m.PaymentAmount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group CardholdersNameSection">
+                    @Html.LabelFor(m => m.CardholdersName, new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.CardholdersName, new { @class = "form-control", required = "", placeholder = "Enter your name as it appears on the card" })
+                        @Html.ValidationMessageFor(m => m.CardholdersName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group CardNumberSection">
+                    @Html.LabelFor(m => m.CardNumber, new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control cc-number", required = "", placeholder = "Enter the long card number", autocomplete = "off" })
+                        @Html.ValidationMessageFor(m => m.CardNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group CardExpiryDateSection">
+                    @Html.LabelFor(m => m.CardExpiryDate, new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.CardExpiryDate, new { @class = "form-control cc-exp", required = "", autocomplete="off" ,placeholder="Cards expiry date e.g 03 / 17" })
+                        @Html.ValidationMessageFor(m => m.CardExpiryDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group CardCCVSection">
+                    @Html.LabelFor(m => m.CardCcv, new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.CardCcv, new { @class = "form-control cc-cvc", required = "", autocomplete = "off", placeholder = "Security code" })
+                        @Html.ValidationMessageFor(m => m.CardCcv, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment">Proccess Payment</button>
+                </div>
+            </div>*@
         }
-}
+        }
