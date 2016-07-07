@@ -36,7 +36,7 @@
                     </b>
                   </HeaderTemplate>
                   <ItemTemplate>
-                    <%# umbraco.BusinessLogic.User.GetUser(int.Parse(DataBinder.Eval(Container.DataItem, "UserId", "{0}"))).Name%>
+                    <%# umbraco.BusinessLogic.User.GetUser(int.Parse(DataBinder.Eval(Container.DataItem, "MemberId", "{0}"))).Name%>
                   </ItemTemplate>
                 </asp:TemplateColumn>
                 <asp:TemplateColumn>
