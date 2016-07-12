@@ -11,95 +11,69 @@
     </h4>
     <hr>
 
-    using (Html.BeginUmbracoForm("ProcessPaymentForm", "PaymentSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
+    if (TempData.ContainsKey("paymentSuccess"))
+    {
+    var successMessage = (string)TempData["paymentSuccess"];
+        <div role="alert" class="alert alert-success alert-dismissible fade in">
+            <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>@Html.Raw(successMessage)</p>
+        </div>
+    }
+    else
         {
 
-        if (Model.IsUserAdmin)
+        if (TempData.ContainsKey("paymentError"))
             {
-            <div class="form-group">
-                @Html.LabelFor(m => m.MemberId, new { @class = "control-label col-sm-4" })
-
-                <div class="col-sm-8">
-                    @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new { @class = "form-control" })
-                </div>
+            var errorMessage = (string)TempData["paymentError"];
+            <div role="alert" class="alert alert-danger alert-dismissible fade in">
+                <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p>@Html.Raw(errorMessage)</p>
             </div>
             }
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.PaymentAmount, new { @class = "control-label col-sm-4" })
+        using (Html.BeginUmbracoForm("ProcessPaymentForm", "PaymentSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
+            {
 
-            <div class="col-sm-4">
-                @Html.TextBoxFor(m => m.PaymentAmount, new { @class = "form-control", required = "", placeholder = "Enter the amount you wish to pay" })
-                @Html.ValidationMessageFor(m => m.PaymentAmount, "", new { @class = "text-danger" })
-            </div>
-
-            <div class="form-group col-sm-4 text-right">
-                <script src="https://checkout.stripe.com/checkout.js"
-                        class="stripe-button"
-                        data-key="@Model.PublishApiKey"
-                        data-amount="@Model.PaymentAmount"
-                        data-email="@Model.MemberEmailAddress"
-                        data-name="Sweet Serenity by Sarah"
-                        data-description="Treatment payment"
-                        data-billing-address="true"
-                        data-image="/Images/SSS_Logo_Square.png"
-                        data-locale="auto"
-                        data-currency="aud"
-                        data-label="Card Payment">
-
-
-                </script>
-            </div>
-        </div>
-
-        @*<div id="cardInformation" class="cardInformation">
-                <section id="validationError" class="alert alert-danger">
-                    <a class="close" data-dismiss="alert" href="#">x</a>
-                </section>
-
+            if (Model.IsUserAdmin)
+                {
                 <div class="form-group">
-                    @Html.LabelFor(m => m.PaymentAmount, new { @class = "control-label col-sm-4" })
+                    @Html.LabelFor(m => m.MemberId, new {@class = "control-label col-sm-4"})
+
                     <div class="col-sm-8">
-                        @Html.TextBoxFor(m => m.PaymentAmount, new { @class = "form-control", required = "", placeholder = "Enter the amount you wish to pay" })
-                        @Html.ValidationMessageFor(m => m.PaymentAmount, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new {@class = "form-control"})
+                        @Html.HiddenFor(m => m.MemberEmailAddress)
                     </div>
                 </div>
+            }
 
-                <div class="form-group CardholdersNameSection">
-                    @Html.LabelFor(m => m.CardholdersName, new { @class = "control-label col-sm-4" })
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(m => m.CardholdersName, new { @class = "form-control", required = "", placeholder = "Enter your name as it appears on the card" })
-                        @Html.ValidationMessageFor(m => m.CardholdersName, "", new { @class = "text-danger" })
-                    </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.PaymentAmount, new {@class = "control-label col-sm-4"})
+
+                <div class="col-sm-4">
+                    @Html.TextBoxFor(m => m.PaymentAmount, new {@class = "form-control", required = "", placeholder = "Enter the amount you wish to pay"})
+                    @Html.ValidationMessageFor(m => m.PaymentAmount, "", new {@class = "text-danger"})
                 </div>
 
-                <div class="form-group CardNumberSection">
-                    @Html.LabelFor(m => m.CardNumber, new { @class = "control-label col-sm-4" })
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control cc-number", required = "", placeholder = "Enter the long card number", autocomplete = "off" })
-                        @Html.ValidationMessageFor(m => m.CardNumber, "", new { @class = "text-danger" })
-                    </div>
+                <div class="form-group col-sm-4 text-right">
+                    <script src="https://checkout.stripe.com/checkout.js"
+                            class="stripe-button"
+                            data-key="@Model.PublishApiKey"
+                            data-amount="@Model.PaymentAmount"
+                            data-email="@Model.MemberEmailAddress"
+                            data-name="Sweet Serenity by Sarah"
+                            data-description="Treatment payment"
+                            data-billing-address="true"
+                            data-image="/Images/SSS_Logo_Square.png"
+                            data-locale="auto"
+                            data-currency="aud"
+                            data-label="Card Payment">
+                    </script>
                 </div>
-
-                <div class="form-group CardExpiryDateSection">
-                    @Html.LabelFor(m => m.CardExpiryDate, new { @class = "control-label col-sm-4" })
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(m => m.CardExpiryDate, new { @class = "form-control cc-exp", required = "", autocomplete="off" ,placeholder="Cards expiry date e.g 03 / 17" })
-                        @Html.ValidationMessageFor(m => m.CardExpiryDate, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group CardCCVSection">
-                    @Html.LabelFor(m => m.CardCcv, new { @class = "control-label col-sm-4" })
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(m => m.CardCcv, new { @class = "form-control cc-cvc", required = "", autocomplete = "off", placeholder = "Security code" })
-                        @Html.ValidationMessageFor(m => m.CardCcv, "", new {@class = "text-danger"})
-                    </div>
-                </div>
-
-                <div class="form-group col-sm-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-lg" name="processPayment" id="processPayment">Proccess Payment</button>
-                </div>
-            </div>*@
+            </div>
         }
+    }
 }

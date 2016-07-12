@@ -1,0 +1,14 @@
+﻿2016-07-09 02:00:14,326 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [LogScrubber] Terminating
+2016-07-09 02:00:14,326 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [LogScrubber] Waiting for tasks to complete
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [LogScrubber] Tasks completed, terminated
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledPublishing] Terminating
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledPublishing] Waiting for tasks to complete
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledPublishing] Tasks completed, terminated
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [XmlCacheFilePersister] Terminating
+2016-07-09 02:00:14,329 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-07-09 02:00:14,371 [65] INFO  umbraco.content - [T112/D5] Saved Xml to file.
+2016-07-09 02:00:14,372 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T119/D5] [XmlCacheFilePersister] Tasks completed, terminated
+2016-07-09 02:00:14,596 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledTasks] Terminating
+2016-07-09 02:00:14,596 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledTasks] Waiting for tasks to complete
+2016-07-09 02:00:14,596 [65] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T75/D5] [ScheduledTasks] Tasks completed, terminated
+2016-07-09 02:00:14,606 [65] INFO  Umbraco.Core.UmbracoApplicationBase - [T112/D5] Application shutdown. Reason: HostingEnvironment
