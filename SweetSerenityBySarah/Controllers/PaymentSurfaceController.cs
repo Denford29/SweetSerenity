@@ -70,6 +70,13 @@ namespace SweetSerenityBySarah.Controllers
         public ActionResult ProcessPaymentForm(PaymentFormModel paymentModel)
             {
 
+            if (string.IsNullOrWhiteSpace(paymentModel.StripeToken))
+                {
+                TempData["paymentError"] =
+                    "Opps... Payment Form Error, There was an error with your details please check them and try again.";
+                return CurrentUmbracoPage();
+                }
+
             if (string.IsNullOrWhiteSpace(paymentModel.MemberEmailAddress) &&
                 string.IsNullOrWhiteSpace(paymentModel.MemberId))
                 {
@@ -92,19 +99,19 @@ namespace SweetSerenityBySarah.Controllers
             var paymentDescription = "Payment for treatment";
             var typedMember = Umbraco.TypedMember(currentMember.Id);
             if (typedMember != null && typedMember.Id > 0)
-            {
-                if (typedMember.HasProperty("StripeCustomerId") && typedMember.HasValue("StripeCustomerId"))
                 {
-                stripeCustomerId = typedMember.GetPropertyValue<string>("StripeCustomerId");
-                }
+                if (typedMember.HasProperty("StripeCustomerId") && typedMember.HasValue("StripeCustomerId"))
+                    {
+                    stripeCustomerId = typedMember.GetPropertyValue<string>("StripeCustomerId");
+                    }
 
                 if (typedMember.HasProperty("fullName") && typedMember.HasValue("fullName"))
                     {
                     memberFullName = typedMember.GetPropertyValue<string>("fullName");
-                        paymentDescription += " for : " + memberFullName;
+                    paymentDescription += " for : " + memberFullName;
                     }
-            }
-           
+                }
+
 
             //get the api keys to use from the site settings page
             var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");

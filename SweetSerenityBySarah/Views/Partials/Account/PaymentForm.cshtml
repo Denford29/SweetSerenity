@@ -12,15 +12,15 @@
     <hr>
 
     if (TempData.ContainsKey("paymentSuccess"))
-    {
-    var successMessage = (string)TempData["paymentSuccess"];
+        {
+        var successMessage = (string)TempData["paymentSuccess"];
         <div role="alert" class="alert alert-success alert-dismissible fade in">
             <button aria-label="Close" data-dismiss="alert" class="close" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
             <p>@Html.Raw(successMessage)</p>
         </div>
-    }
+        }
     else
         {
 
@@ -32,48 +32,83 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <p>@Html.Raw(errorMessage)</p>
+                <span class="payment-errors"></span>
             </div>
             }
 
         using (Html.BeginUmbracoForm("ProcessPaymentForm", "PaymentSurface", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "cardDetailsForm" }))
             {
 
+            <div role="alert" class="alert alert-danger alert-dismissible fade in hidden" id="stripeErrors">
+                <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span class="payment-errors"></span>
+            </div>
+
             if (Model.IsUserAdmin)
                 {
                 <div class="form-group">
-                    @Html.LabelFor(m => m.MemberId, new {@class = "control-label col-sm-4"})
+                    @Html.LabelFor(m => m.MemberId, new { @class = "control-label col-sm-4" })
 
                     <div class="col-sm-8">
-                        @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new {@class = "form-control"})
+                        @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new { @class = "form-control" })
                         @Html.HiddenFor(m => m.MemberEmailAddress)
                     </div>
                 </div>
+                }
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PaymentAmount, new {@class = "control-label col-sm-5"})
+                            <div class="col-sm-7">
+                                @Html.TextBoxFor(m => m.PaymentAmount, new { @class = "form-control", required = "", placeholder = "Minimum amount $5" })
+                                @Html.ValidationMessageFor(m => m.PaymentAmount, "", new {@class = "text-danger"})
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label col-sm-5">
+                                Card Number
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" size="20" data-stripe="number" class="form-control cc-number" placeholder="Card Number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label col-sm-5">
+                                Expiry (MM/YY)
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" id="CardExpiryDate" class="form-control cc-exp" placeholder="Expiry MM/YY">
+                                <input type="hidden" data-stripe="exp_month" class="form-control" id="exp_month">
+                                <input type="hidden" data-stripe="exp_year" class="form-control" id="exp_year">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label col-sm-5">
+                                CVC
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" size="4" data-stripe="cvc" class="form-control cc-cvc" placeholder="Security Code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-large" id="stripePaymentBtn">Submit Payment</button>
+                </div>
             }
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.PaymentAmount, new {@class = "control-label col-sm-4"})
-
-                <div class="col-sm-4">
-                    @Html.TextBoxFor(m => m.PaymentAmount, new {@class = "form-control", required = "", placeholder = "Enter the amount you wish to pay"})
-                    @Html.ValidationMessageFor(m => m.PaymentAmount, "", new {@class = "text-danger"})
-                </div>
-
-                <div class="form-group col-sm-4 text-right">
-                    <script src="https://checkout.stripe.com/checkout.js"
-                            class="stripe-button"
-                            data-key="@Model.PublishApiKey"
-                            data-amount="@Model.PaymentAmount"
-                            data-email="@Model.MemberEmailAddress"
-                            data-name="Sweet Serenity by Sarah"
-                            data-description="Treatment payment"
-                            data-billing-address="true"
-                            data-image="/Images/SSS_Logo_Square.png"
-                            data-locale="auto"
-                            data-currency="aud"
-                            data-label="Card Payment">
-                    </script>
-                </div>
-            </div>
         }
-    }
 }

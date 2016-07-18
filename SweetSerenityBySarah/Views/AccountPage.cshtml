@@ -57,106 +57,239 @@
 
 @section footerScripts{
 
-    @*<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
-    <script>
-        $("#validationError").hide();
-        $("#submitError").hide();
-        //$('#processPayment').prop('disabled', false);
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-        $('.cc-number').payment('formatCardNumber');
-        $('.cc-exp').payment('formatCardExpiry');
-        $('.cc-cvc').payment('formatCardCVC');
+            Stripe.setPublishableKey("@publishAPIKey");
 
-        $('#processPayment').click(function () {
-            $('#cardDetailsForm').trigger('submit');
-        });
+            $('.cc-number').payment('formatCardNumber');
+            $('.cc-exp').payment('formatCardExpiry');
+            $('.cc-cvc').payment('formatCardCVC');
 
-        $('#cardDetailsForm').submit(function (event) {
-
-            var $form = $(this);
-            //$form.find('#processPayment').prop('disabled', true);
-
-            $("#cardDetailsForm").validate({
-                CardholdersName: {
-                    required: true
-                },
-
-                CardNumber: {
-                    required: true
-                },
-
-                CardExpiryDate: {
-                    required: true
-                },
-
-                CardCcv: {
-                    required: true
-                },
-                errorPlacement: function (error, element) {
-                },
-                invalidHandler: function (event, validator) {
-                    var errors = validator.numberOfInvalids();
-                    if (errors) {
-                        var message = "<h4>Form error!</h4><p>We're sorry, there was a problem submitting your form. Please check the fields highlighted below to resolve any errors.</p>";
-                        $("#validationError").html(message);
-                        $("#validationError").show();
-                        //$form.find('#processPayment').prop('disabled', false);
-                    }
-                    else {
-                        $("#validationError").hide();
-                        //$form.find('#processPayment').prop('disabled', true);
-                    }
-                },
-                submitHandler: function () {
-                    $(window).spin();
-                    Stripe.setPublishableKey(@publishAPIKey);
-                    var expireDate = $('#CardExpiryDate').val();
-                    var expireMonth = "";
-                    var expireYear = "";
-                    if (expireDate !== null) {
-                        var arr = expireDate.split('/');
-                        expireMonth = arr[0];
-                        expireYear = arr[1];
-                    }
-
-                    Stripe.card.createToken({
-                        number: $('#CardNumber').val(),
-                        cvc: $('#CardCcv').val(),
-                        exp_month: parseInt(expireMonth),
-                        exp_year: parseInt(expireYear)
-                    }, stripeResponseHandler);
+            var paymentBtn = $("#stripePaymentBtn");
+            if (paymentBtn !== "undefinded") {
+                if (paymentBtn.is(':visible')) {
+                    paymentBtn.prop('disabled', true);
                 }
+            }
+
+            var paymentAmount = $("#PaymentAmount");
+            if (paymentAmount !== "undefined") {
+                paymentAmount.on("change", function () {
+                    if ($(this).val() !== jQuery.data(this, "lastvalue")) {
+                        var setAmount = $(this).val();
+                        if (setAmount > 5) {
+                            paymentBtn.prop('disabled', false);
+                        } else {
+                            paymentBtn.prop('disabled', true);
+                        }
+                    }
+                });
+            }
+
+            var $form = $('#cardDetailsForm');
+            $form.submit(function (event) {
+                var expireDate = $('#CardExpiryDate').val();
+                var expireMonth = "";
+                var expireYear = "";
+                if (expireDate !== null) {
+                    var arr = expireDate.split('/');
+                    expireMonth = arr[0];
+                    expireYear = arr[1];
+                }
+
+                $form.find('#exp_month').val(expireMonth);
+                $form.find('#exp_year').val(expireYear);
+
+                debugger;
+                // Disable the submit button to prevent repeated clicks:
+                $form.find('.submit').prop('disabled', true);
+
+                // Request a token from Stripe:
+                Stripe.card.createToken($form, stripeResponseHandler);
+
+                // Prevent the form from being submitted:
+                return false;
             });
-            return false;
+
         });
 
         function stripeResponseHandler(status, response) {
-
             // Grab the form:
             var $form = $('#cardDetailsForm');
+            debugger;
+            if (response.error) { // Problem!
 
-            if (response.error) {
+                // Show the errors on the form:
+                $form.find("#stripeErrors").show();
+                $form.find('.payment-errors').text(response.error.message);
+                $form.find('.submit').prop('disabled', false); // Re-enable submission
 
-                // Show the errors on the form
-                var message = "<h4>Form error!</h4><p>" + response.error.message + "</p>";
-                $("#validationError").html(message);
-                $("#validationError").show();
-                $form.find('#processPayment').prop('disabled', false);
-                $(window).spin();
-
-            } else {
+            } else { // Token was created!
 
                 // Get the token ID:
                 var token = response.id;
 
-                // Insert the token into the form so it gets submitted to the server:
-                $form.append($('<input type="hidden" name="StripeToken" />').val(token));
+                // Insert the token ID into the form so it gets submitted to the server:
+                $form.append($('<input type="hidden" name="stripeToken">').val(token));
 
                 // Submit the form:
                 $form.get(0).submit();
-                $(window).spin();
             }
-        }
-    </script>*@
+        };
+    </script>
+
+
+    @*<script type="text/javascript">
+            $(document).ready(function () {
+
+                var paymentBtn = $("#stripePaymentBtn").find(".stripe-button-el");
+
+                setTimeout(function () {
+
+                    if (paymentBtn !== "undefinded") {
+                        if (paymentBtn.is(':visible')) {
+                            paymentBtn.prop('disabled', true);
+                        }
+                    }
+
+                    var stripeScript = $("#stripePaymentBtn").find(".stripe-button");
+
+                    var paymentEmail = $("#MemberId");
+                    var submitEmail = $("#MemberEmailAddress");
+                    if (paymentEmail !== "undefined") {
+                        paymentEmail.on("change", function () {
+                            if ($(this).val() !== jQuery.data(this, "lastvalue")) {
+                                var setEmail = $("select#MemberId option:selected").text();
+                                if (stripeScript !== "undefined") {
+                                    stripeScript.attr("data-email", setEmail);
+                                }
+                                submitEmail.val('');
+                                submitEmail.val(setEmail);
+                            }
+                        });
+                    }
+
+                    var paymentAmount = $("#PaymentAmount");
+                    if (paymentAmount !== "undefined") {
+                        paymentAmount.on("change", function () {
+                            if ($(this).val() !== jQuery.data(this, "lastvalue")) {
+                                var setAmount = $(this).val();
+                                if (setAmount > 5) {
+                                    if (stripeScript !== "undefined") {
+                                        stripeScript.attr("data-amount", setAmount);
+                                    }
+                                    paymentBtn.prop('disabled', false);
+                                }
+                            }
+                        });
+                    }
+
+                }, 1000);
+
+                });
+        </script>*@
+
+    @*<script>
+            $("#validationError").hide();
+            $("#submitError").hide();
+            //$('#processPayment').prop('disabled', false);
+
+            $('.cc-number').payment('formatCardNumber');
+            $('.cc-exp').payment('formatCardExpiry');
+            $('.cc-cvc').payment('formatCardCVC');
+
+            $('#processPayment').click(function () {
+                $('#cardDetailsForm').trigger('submit');
+            });
+
+            $('#cardDetailsForm').submit(function (event) {
+
+                var $form = $(this);
+                //$form.find('#processPayment').prop('disabled', true);
+
+                $("#cardDetailsForm").validate({
+                    CardholdersName: {
+                        required: true
+                    },
+
+                    CardNumber: {
+                        required: true
+                    },
+
+                    CardExpiryDate: {
+                        required: true
+                    },
+
+                    CardCcv: {
+                        required: true
+                    },
+                    errorPlacement: function (error, element) {
+                    },
+                    invalidHandler: function (event, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            var message = "<h4>Form error!</h4><p>We're sorry, there was a problem submitting your form. Please check the fields highlighted below to resolve any errors.</p>";
+                            $("#validationError").html(message);
+                            $("#validationError").show();
+                            //$form.find('#processPayment').prop('disabled', false);
+                        }
+                        else {
+                            $("#validationError").hide();
+                            //$form.find('#processPayment').prop('disabled', true);
+                        }
+                    },
+                    submitHandler: function () {
+                        $(window).spin();
+                        Stripe.setPublishableKey(@publishAPIKey);
+                        var expireDate = $('#CardExpiryDate').val();
+                        var expireMonth = "";
+                        var expireYear = "";
+                        if (expireDate !== null) {
+                            var arr = expireDate.split('/');
+                            expireMonth = arr[0];
+                            expireYear = arr[1];
+                        }
+
+                        Stripe.card.createToken({
+                            number: $('#CardNumber').val(),
+                            cvc: $('#CardCcv').val(),
+                            exp_month: parseInt(expireMonth),
+                            exp_year: parseInt(expireYear)
+                        }, stripeResponseHandler);
+                    }
+                });
+                return false;
+            });
+
+            function stripeResponseHandler(status, response) {
+
+                // Grab the form:
+                var $form = $('#cardDetailsForm');
+
+                if (response.error) {
+
+                    // Show the errors on the form
+                    var message = "<h4>Form error!</h4><p>" + response.error.message + "</p>";
+                    $("#validationError").html(message);
+                    $("#validationError").show();
+                    $form.find('#processPayment').prop('disabled', false);
+                    $(window).spin();
+
+                } else {
+
+                    // Get the token ID:
+                    var token = response.id;
+
+                    // Insert the token into the form so it gets submitted to the server:
+                    $form.append($('<input type="hidden" name="StripeToken" />').val(token));
+
+                    // Submit the form:
+                    $form.get(0).submit();
+                    $(window).spin();
+                }
+            }
+        </script>*@
 }
