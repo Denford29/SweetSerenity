@@ -90,9 +90,10 @@
                         @if (homePage.Children.Any())
                             {
                             foreach (var landingPage in homePage.Children.Where(
-                                    childPage => childPage.IsVisible() && 
-                                    !childPage.GetPropertyValue<bool>("hideFromMenu") && 
-                                    childPage.DocumentTypeAlias != "LoginRegisterPage" ))
+                                    childPage => childPage.IsVisible() &&
+                                    !childPage.GetPropertyValue<bool>("hideFromMenu") &&
+                                    childPage.DocumentTypeAlias != "LoginRegisterPage" &&
+                                    childPage.DocumentTypeAlias != "AccountPage"))
                                 {
                                 var pageTitle = landingPage.Name;
                                 if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
@@ -115,19 +116,36 @@
                             var haveUser = HttpContext.Current.User.Identity.IsAuthenticated;
                             if (haveUser && currentMember != null)
                                 {
-                                <li>
-                                    <a title="Logout - @siteDefaultName" onclick="logoutFormSubmit()">
-                                        Logout
-                                        @using (Html.BeginForm("LogoutUser", "AccountSurface", FormMethod.Post, new { role = "form", id = "logoutForm" }))
-                                            {
-                                            }
-                                        <script language="javascript" type="text/javascript">
-                                            function logoutFormSubmit() {
-                                                $("#logoutForm").submit();
-                                            }
-                                        </script>
-                                    </a>
-                                </li>
+
+                                var accountPage = homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu") && childPage.DocumentTypeAlias == "AccountPage").ToList().FirstOrDefault();
+
+                                if (accountPage != null && accountPage.Id > 0)
+                                    {
+                                    var pageTitle = accountPage.Name;
+                                    if (accountPage.HasProperty("linkTittle") && accountPage.HasValue("linkTittle"))
+                                        {
+                                        pageTitle = accountPage.GetPropertyValue("linkTittle").ToString();
+                                        }
+                                    <li @(accountPage.Id == Model.Content.Id ? "class=active" : null)>
+                                        <a href="@accountPage.Url" title="@pageTitle - @siteDefaultName">
+                                            @pageTitle
+                                        </a>
+                                    </li>
+                                    }
+
+                                    <li>
+                                        <a title="Logout - @siteDefaultName" onclick="logoutFormSubmit()">
+                                            Logout
+                                            @using (Html.BeginForm("LogoutUser", "AccountSurface", FormMethod.Post, new { role = "form", id = "logoutForm" }))
+                                                {
+                                                }
+                                            <script language="javascript" type="text/javascript">
+                                                function logoutFormSubmit() {
+                                                    $("#logoutForm").submit();
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
                                 }
                             }
                         else

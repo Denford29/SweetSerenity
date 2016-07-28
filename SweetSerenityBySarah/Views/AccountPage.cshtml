@@ -43,7 +43,10 @@
                                 @*@Html.Partial("Account/PaymentForm")*@
                             </div>
 
-                            @Html.Partial("Account/PaymentsList")
+                            <div class="col-lg-12">
+                                @Html.Action("PaymentsList", "PaymentSurface")
+                                @*@Html.Partial("Account/PaymentsList")*@
+                            </div>
 
                         </div>
                     </div>
@@ -75,6 +78,21 @@
                 }
             }
 
+            var memberId = $("#MemberId");
+            var submitEmail = $("#MemberEmailAddress");
+            if (memberId !== "undefined") {
+                memberId.on("change", function () {
+                    if ($(this).val() !== jQuery.data(this, "lastvalue")) {
+                        var setEmail = $("select#MemberId option:selected").text();
+                        var setMemberId = $("select#MemberId option:selected").val();
+                        
+                        submitEmail.val('');
+                        submitEmail.val(setEmail);
+                    }
+                });
+            }
+
+
             var paymentAmount = $("#PaymentAmount");
             if (paymentAmount !== "undefined") {
                 paymentAmount.on("change", function () {
@@ -91,6 +109,7 @@
 
             var $form = $('#cardDetailsForm');
             $form.submit(function (event) {
+                $(window).spin();
                 var expireDate = $('#CardExpiryDate').val();
                 var expireMonth = "";
                 var expireYear = "";
@@ -100,10 +119,8 @@
                     expireYear = arr[1];
                 }
 
-                $form.find('#exp_month').val(expireMonth);
-                $form.find('#exp_year').val(expireYear);
-
-                debugger;
+                $form.find('#exp_month').val(parseInt(expireMonth));
+                $form.find('#exp_year').val(parseInt(expireYear));
                 // Disable the submit button to prevent repeated clicks:
                 $form.find('.submit').prop('disabled', true);
 
@@ -121,7 +138,7 @@
             var $form = $('#cardDetailsForm');
             debugger;
             if (response.error) { // Problem!
-
+                $(window).spin();
                 // Show the errors on the form:
                 $form.find("#stripeErrors").show();
                 $form.find('.payment-errors').text(response.error.message);

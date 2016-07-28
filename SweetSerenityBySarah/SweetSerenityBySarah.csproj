@@ -556,7 +556,6 @@
     <Content Include="App_Plugins\Optimus\Icons\typescript-icon-grey.png" />
     <Content Include="App_Plugins\Optimus\Icons\typescript-icon.png" />
     <Content Include="App_Plugins\Optimus\Pages\FileEditor.aspx" />
-    <Content Include="App_Code\pagingtemplate.cshtml" />
     <Content Include="App_Plugins\GMaps\package.manifest" />
     <None Include="App_Plugins\Optimus\Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="App_Plugins\Optimus\Scripts\jquery-2.0.3.js" />
@@ -690,6 +689,7 @@
     <Content Include="bin\MsieJavaScriptEngine.dll" />
     <Content Include="bin\Optimus.dll" />
     <Content Include="bin\Optimus.V7.dll" />
+    <Content Include="bin\Our.Umbraco.HttpsRedirect.dll" />
     <Content Include="bin\Our.Umbraco.Tree.Config.dll" />
     <Content Include="bin\ru-ru\BundleTransformer.Core.resources.dll" />
     <Content Include="bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll" />
@@ -1105,6 +1105,9 @@
     <Content Include="Views\Partials\Account\PaymentForm.cshtml" />
     <Content Include="Views\Partials\Account\PaymentsList.cshtml" />
     <Content Include="Views\Partials\Master\UrlRedirect.cshtml" />
+    <Content Include="App_Code\PagingTemplate.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="web.backup.1444209675.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3666,7 +3669,6 @@
   <ItemGroup>
     <Content Include="App_Code\GMapsLocation.cs" />
     <Content Include="App_Code\GMapsValueConverter.cs" />
-    <Content Include="App_Code\paging.cs" />
     <Compile Include="App_Plugins\Analytics\backOffice\OAuth.aspx.cs">
       <DependentUpon>OAuth.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3691,7 +3693,9 @@
     <Compile Include="Models\AccountLoginModel.cs" />
     <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\Paging.cs" />
     <Compile Include="Models\PaymentFormModel.cs" />
+    <Compile Include="Models\PaymentListModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />

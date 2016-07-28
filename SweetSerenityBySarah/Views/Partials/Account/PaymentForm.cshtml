@@ -1,14 +1,15 @@
-﻿@using SweetSerenityBySarah
-@using SweetSerenityBySarah.Models
-@model SweetSerenityBySarah.Models.PaymentFormModel
+﻿@model SweetSerenityBySarah.Models.PaymentFormModel
 @{
 
     //var model = new PaymentFormModel();
 
     <hr>
     <h4 class="intro-text text-center">
-        Payment Details...
+        New Payment Details...
     </h4>
+    <p class="text-center small">
+        Enter your card details and amount below to pay for your treatment...
+    </p>
     <hr>
 
     if (TempData.ContainsKey("paymentSuccess"))
@@ -46,16 +47,21 @@
                 <span class="payment-errors"></span>
             </div>
 
-            if (Model.IsUserAdmin)
+                if (Model.IsUserAdmin)
                 {
-                <div class="form-group">
-                    @Html.LabelFor(m => m.MemberId, new { @class = "control-label col-sm-4" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MemberId, new {@class = "control-label col-sm-4"})
 
-                    <div class="col-sm-8">
-                        @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new { @class = "form-control" })
-                        @Html.HiddenFor(m => m.MemberEmailAddress)
+                        <div class="col-sm-8">
+                            @Html.DropDownListFor(m => m.MemberId, new SelectList(Model.SiteMembers, "Id", "Email"), new {@class = "form-control"})
+                            @Html.HiddenFor(m => m.MemberEmailAddress)
+                        </div>
                     </div>
-                </div>
+                }
+                else
+                {
+                    @Html.HiddenFor(m => m.MemberId)
+                    @Html.HiddenFor(m => m.MemberEmailAddress)
                 }
                 <div class="row">
                     <div class="col-sm-6">

@@ -1,1 +1,57 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using SweetSerenityBySarah.Models
+@model SweetSerenityBySarah.Models.PaymentListModel
+@{
+
+    int albumsCount = Model.Payments.Count();
+    const int maxPaginatingItems = 10;
+    Paging paging = Paging.GetPages(albumsCount, maxPaginatingItems);
+    var displayPayments = Model.Payments.Skip(paging.Skip).Take(paging.Take).ToList();
+
+
+    <hr>
+    <h4 class="intro-text text-center">
+        Payments Made...
+    </h4>
+    <p class="text-center small">
+        Below is a list of payments made so far...
+    </p>
+    <hr>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Payment Description</th>
+                    <th>Payment Status</th>
+                    <th>Payment Amount</th>
+                    <th>Payment Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var paymentItem in displayPayments)
+                    {
+                    <tr>
+                        <th scope="row">
+                            @paymentItem.PaymentDescription
+                        </th>
+                        <td>
+                            @paymentItem.StripeChargeStatus
+                        </td>
+                        <td>
+                            $ @paymentItem.PaymentAmount
+                        </td>
+                        <td>
+                            @paymentItem.StripeChargeDate.ToLongDateString()
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+        @if (Model.Payments.Count > 10)
+            {
+            <div class="text-center">
+                @PagingTemplate.RenderPaging(paging, Model.CurrentPage.Id)
+            </div>
+            }
+    </div>
+}
