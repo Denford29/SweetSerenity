@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plugins>
   <baseType type="umbraco.interfaces.IApplicationStartupHandler" resolutionType="FindAllTypes">
-    <add type="Optimus.Umbraco.StartUpHandlers, Optimus, Version=1.3.2.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Our.Umbraco.HttpsRedirect.Events.EventsHandler, Our.Umbraco.HttpsRedirect, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Installer.AutoInstaller, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="InfoCaster.Umbraco.UrlTracker.UrlTrackerApplicationEventHandler, InfoCaster.Umbraco.UrlTracker, Version=3.8.5620.26854, Culture=neutral, PublicKeyToken=null" />
-    <add type="umbraco.BusinessLogic.ApplicationRegistrar, businesslogic, Version=1.0.5632.22683, Culture=neutral, PublicKeyToken=null" />
-    <add type="umbraco.BusinessLogic.ApplicationTreeRegistrar, businesslogic, Version=1.0.5632.22683, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Cache.CacheRefresherEventHandler, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Models.Mapping.LogModelMapper, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Models.Mapping.MacroModelMapper, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
@@ -39,21 +33,27 @@
     <add type="umbraco.presentation.nodeFactory.UmbracoSiteMapProviderAccessUpdate, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.presentation.EnsureSystemPathsApplicationStartupHandler, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.presentation.umbraco.Search.ExamineEvents, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Installer.AutoInstaller, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="InfoCaster.Umbraco.UrlTracker.UrlTrackerApplicationEventHandler, InfoCaster.Umbraco.UrlTracker, Version=3.8.5620.26854, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.editorControls.PickerRelations.PickerRelationsEventHandler, umbraco.editorControls, Version=1.0.5632.22689, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.ApplicationRegistrar, businesslogic, Version=1.0.5632.22683, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.ApplicationTreeRegistrar, businesslogic, Version=1.0.5632.22683, Culture=neutral, PublicKeyToken=null" />
+    <add type="Optimus.Umbraco.StartUpHandlers, Optimus, Version=1.3.2.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Strategies.RelateOnCopyHandler, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
     <add type="Archetype.Events.ExpireCache, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Analytics.UmbracoStartup, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.providers.members.MembershipEventHandler, umbraco.providers, Version=1.0.5632.22685, Culture=neutral, PublicKeyToken=null" />
+    <add type="Our.Umbraco.HttpsRedirect.Events.EventsHandler, Our.Umbraco.HttpsRedirect, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter" resolutionType="FindAllTypes" />
   <baseType type="Umbraco.Core.PropertyEditors.IPropertyValueConverter" resolutionType="FindAllTypes">
-    <add type="Archetype.PropertyConverters.ArchetypeValueConverter, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="GMapsValueConverter, App_Code.grln8rnz, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ValueConverters.MacroContainerValueConverter, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ValueConverters.RelatedLinksEditorValueConvertor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ValueConverters.MarkdownEditorValueConverter, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ValueConverters.TextStringValueConverter, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ValueConverters.RteMacroRenderingValueConverter, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
+    <add type="Archetype.PropertyConverters.ArchetypeValueConverter, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="GMapsValueConverter, App_Code.inki_7_a, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.PropertyValueConverterBase, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.ValueConverters.IntegerValueConverter, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
@@ -67,34 +67,16 @@
     <add type="Umbraco.Core.PropertyEditors.ValueConverters.YesNoValueConverter, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Web.Mvc.SurfaceController" resolutionType="FindAllTypes">
-    <add type="SweetSerenityBySarah.Controllers.AccountSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="SweetSerenityBySarah.Controllers.ContactSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="SweetSerenityBySarah.Controllers.PaymentSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Controllers.UmbProfileController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Controllers.UmbLoginStatusController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Controllers.UmbRegisterController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Controllers.UmbLoginController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="SweetSerenityBySarah.Controllers.AccountSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="SweetSerenityBySarah.Controllers.ContactSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="SweetSerenityBySarah.Controllers.PaymentSurfaceController, SweetSerenityBySarah, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Web.WebApi.UmbracoApiController" resolutionType="FindAllTypes">
-    <add type="Archetype.Api.ArchetypeDataTypeController, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Analytics.Controllers.AnalyticsApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Analytics.Controllers.AnalyticsTreeController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Analytics.Controllers.oAuthApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Analytics.Controllers.SettingsApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.AuthenticationController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.ContentController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.DashboardController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
@@ -130,6 +112,24 @@
     <add type="Umbraco.Web.WebServices.ExamineManagementApiController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.WebServices.TagsController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.WebServices.XmlDataIntegrityController, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=4.1.4.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Archetype.Api.ArchetypeDataTypeController, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Analytics.Controllers.AnalyticsApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Analytics.Controllers.AnalyticsTreeController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Analytics.Controllers.oAuthApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="Analytics.Controllers.SettingsApiController, Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.Media.IThumbnailProvider" resolutionType="FindAllTypes">
     <add type="Umbraco.Web.Media.ThumbnailProviders.MediaTypeIconThumbnailProvider, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
@@ -174,7 +174,6 @@
     <add type="Umbraco.Core.Persistence.Mappers.UserTypeMapper, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.PropertyEditors.IParameterEditor" resolutionType="FindAllTypes">
-    <add type="Archetype.PropertyEditors.ArchetypePropertyEditor, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.GridPropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.EmailAddressPropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ImageCropperPropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
@@ -217,6 +216,7 @@
     <add type="Umbraco.Web.PropertyEditors.TextAreaPropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.TextboxPropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.TrueFalsePropertyEditor, umbraco, Version=1.0.5632.22686, Culture=neutral, PublicKeyToken=null" />
+    <add type="Archetype.PropertyEditors.ArchetypePropertyEditor, Archetype, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.5632.22681, Culture=neutral, PublicKeyToken=null" />
   </baseType>
