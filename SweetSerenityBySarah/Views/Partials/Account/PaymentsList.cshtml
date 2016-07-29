@@ -2,9 +2,9 @@
 @model SweetSerenityBySarah.Models.PaymentListModel
 @{
 
-    int albumsCount = Model.Payments.Count();
-    const int maxPaginatingItems = 10;
-    Paging paging = Paging.GetPages(albumsCount, maxPaginatingItems);
+    int paymentsCount = Model.Payments.Count();
+    int maxPaginatingItems = Model.MaximumPageItems;
+    Paging paging = Paging.GetPages(paymentsCount, maxPaginatingItems);
     var displayPayments = Model.Payments.Skip(paging.Skip).Take(paging.Take).ToList();
 
 

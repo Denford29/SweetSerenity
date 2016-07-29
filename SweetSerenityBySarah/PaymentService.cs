@@ -89,5 +89,29 @@ namespace SweetSerenityBySarah
             return publishApiKey;
             }
 
+        /// <summary>
+        /// get the set maximum number of pages to display 
+        /// </summary>
+        /// <param name="siteSetting"></param>
+        /// <returns></returns>
+        public static int GetMaximumPageNumber(IPublishedContent siteSetting)
+        {
+            var maximumPages = 10;
+
+            if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+            {
+                var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+                if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+                {
+                if (siteDetailsPage.HasProperty("maximumPage") && siteDetailsPage.HasValue("maximumPage"))
+                    {
+                    maximumPages = siteDetailsPage.GetPropertyValue<int>("maximumPage");
+                    }
+                }
+            }
+
+            return maximumPages;
+        }
+
         }
     }

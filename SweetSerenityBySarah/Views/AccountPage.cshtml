@@ -107,6 +107,29 @@
                 });
             }
 
+            $('#paymentCardIcon').hide();
+            $('#cardNumber').on('keyup', function () {
+                var ccNum = $(this).val();
+                if (!ccNum || ccNum.length < 3) {
+                    $('#paymentCardIcon').hide();
+                }
+                else {
+                    try {
+                        var cardType = Stripe.card.cardType(ccNum);
+                        if (cardType) {
+                            cardType = cardType.toLowerCase().replace(/\s/gi, '-');
+                            if (cardType == 'american-express')
+                                cardType = 'amex';
+
+                            $('#cardIcon').attr('class', 'fa fa-cc-' + cardType.toLowerCase());
+                            $('#paymentCardIcon').show();
+                        }
+                    } catch (e) {
+                        $('#paymentCardIcon').hide();
+                    }
+                }
+            });
+
             var $form = $('#cardDetailsForm');
             $form.submit(function (event) {
                 $(window).spin();

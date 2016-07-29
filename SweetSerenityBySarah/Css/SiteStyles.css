@@ -264,6 +264,15 @@ a {
     height: 100%;
 }
 
+.input-group.cardNumber {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cardNumber #cardIcon {
+    font-size: 20px
+}
+
 /* MY WORLD PAGE STYLES
 -------------------------------------------------- */
 

@@ -313,11 +313,15 @@ namespace SweetSerenityBySarah.Controllers
         public ActionResult PaymentsList()
             {
             //get the home page
+            var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+            var maximumPages = PaymentService.GetMaximumPageNumber(siteSetting);
             var homePage = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
             var model = new PaymentListModel
             {
-                CurrentPage = UmbracoContext.Current.PublishedContentRequest.PublishedContent
+                CurrentPage = UmbracoContext.Current.PublishedContentRequest.PublishedContent,
+                MaximumPageItems = maximumPages
             };
+
             //get the current user and check if we have one
             var currentUser = Membership.GetUser();
             if (currentUser != null)
@@ -335,7 +339,6 @@ namespace SweetSerenityBySarah.Controllers
                         adminUser = true;
                         }
                     //get all the payments documents to add to our list
-                    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
                     if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("PaymentDetails").Any())
                         {
                         var paymentItemPages = siteSetting.Descendants("PaymentDetails").ToList();
