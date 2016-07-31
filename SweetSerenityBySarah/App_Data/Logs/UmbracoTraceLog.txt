@@ -1,394 +1,90 @@
-﻿2016-07-29 02:51:54,402 [44] INFO  umbraco.BusinessLogic.Log - [T165/D16] Log scrubbed.  Removed all items older than 2016-05-30 02:51:54
-2016-07-29 06:51:54,409 [44] INFO  umbraco.BusinessLogic.Log - [T179/D16] Log scrubbed.  Removed all items older than 2016-05-30 06:51:54
-2016-07-29 10:51:54,426 [44] INFO  umbraco.BusinessLogic.Log - [T33/D16] Log scrubbed.  Removed all items older than 2016-05-30 10:51:54
-2016-07-29 14:51:54,444 [44] INFO  umbraco.BusinessLogic.Log - [T120/D16] Log scrubbed.  Removed all items older than 2016-05-30 14:51:54
-2016-07-29 18:51:54,456 [44] INFO  umbraco.BusinessLogic.Log - [T179/D16] Log scrubbed.  Removed all items older than 2016-05-30 18:51:54
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledTasks] Terminating
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [LogScrubber] Terminating
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [LogScrubber] Waiting for tasks to complete
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [LogScrubber] Tasks completed, terminated
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [XmlCacheFilePersister] Terminating
-2016-07-29 20:32:17,525 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 20:32:17,541 [44] INFO  umbraco.content - [T58/D16] Save Xml to file...
-2016-07-29 20:32:17,588 [44] INFO  umbraco.content - [T58/D16] Saved Xml to file.
-2016-07-29 20:32:17,588 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T34/D16] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 20:32:17,796 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledPublishing] Terminating
-2016-07-29 20:32:17,796 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 20:32:17,796 [44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D16] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 20:32:17,812 [44] INFO  Umbraco.Core.UmbracoApplicationBase - [T32/D16] Application shutdown. Reason: BinDirChangeOrDirectoryRename
-2016-07-29 20:32:51,417 [49] INFO  Umbraco.Core.CoreBootManager - [T62/D17] Umbraco application starting
-2016-07-29 20:32:51,558 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Determining hash of code files on disk
-2016-07-29 20:32:51,580 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Hash determined (took 19ms)
-2016-07-29 20:32:51,634 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 20:32:52,322 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 684ms)
-2016-07-29 20:32:52,534 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 20:32:52,576 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 41ms)
-2016-07-29 20:32:52,577 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 20:32:52,629 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 52ms)
-2016-07-29 20:32:52,671 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 20:32:52,703 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 31ms)
-2016-07-29 20:32:52,703 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 20:32:52,797 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 93ms)
-2016-07-29 20:32:52,898 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 20:32:52,951 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 53ms)
-2016-07-29 20:32:52,952 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 20:32:53,051 [49] INFO  Umbraco.Core.PluginManager - [T62/D17] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 99ms)
-2016-07-29 20:32:55,388 [49] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D17] Initializing Examine and binding to business logic events
-2016-07-29 20:32:55,630 [49] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D17] Adding examine event handlers for index providers: 3
-2016-07-29 20:32:55,781 [49] INFO  umbraco.content - [T62/D17] Load Xml from file...
-2016-07-29 20:32:55,788 [49] INFO  umbraco.content - [T62/D17] Loaded Xml from file.
-2016-07-29 20:32:56,026 [49] INFO  Umbraco.Core.CoreBootManager - [T62/D17] Umbraco application startup complete (took 4560ms)
-2016-07-29 20:32:56,265 [49] INFO  Umbraco.Web.UmbracoModule - [T29/D17] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 20:32:56,574 [49] INFO  Umbraco.Core.PluginManager - [T29/D17] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2016-07-29 20:32:56,660 [49] INFO  Umbraco.Core.PluginManager - [T29/D17] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 84ms)
-2016-07-29 20:32:58,401 [49] INFO  Umbraco.Core.PluginManager - [T29/D17] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
-2016-07-29 20:32:58,527 [49] INFO  Umbraco.Core.PluginManager - [T29/D17] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 126ms)
-2016-07-29 20:34:09,375 [49] INFO  umbraco.BusinessLogic.Log - [T34/D17] Log scrubbed.  Removed all items older than 2016-05-30 20:34:09
-2016-07-29 20:37:28,553 [49] INFO  Umbraco.Core.PluginManager - [T34/D17] Starting resolution types of Umbraco.Web.Trees.TreeController
-2016-07-29 20:37:28,579 [49] INFO  Umbraco.Core.PluginManager - [T34/D17] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 8 (took 25ms)
-2016-07-29 20:37:28,670 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 20:37:28,717 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Completed resolution of types of umbraco.interfaces.ITree, found 37 (took 47ms)
-2016-07-29 20:37:28,761 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Starting resolution types of Umbraco.Web.Trees.TreeController
-2016-07-29 20:37:28,762 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 8 (took 0ms)
-2016-07-29 20:37:28,767 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 20:37:28,836 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Completed resolution of types of umbraco.interfaces.ITree, found 21 (took 68ms)
-2016-07-29 20:39:06,881 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Starting resolution types of umbraco.interfaces.ICacheRefresher
-2016-07-29 20:39:06,927 [49] INFO  Umbraco.Core.PluginManager - [T37/D17] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 21 (took 53ms)
-2016-07-29 20:58:37,880 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [LogScrubber] Terminating
-2016-07-29 20:58:37,880 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [LogScrubber] Waiting for tasks to complete
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [LogScrubber] Tasks completed, terminated
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledTasks] Terminating
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [XmlCacheFilePersister] Terminating
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledPublishing] Terminating
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 20:58:37,886 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T28/D17] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 20:58:37,902 [49] INFO  umbraco.content - [T24/D17] Save Xml to file...
-2016-07-29 20:58:37,964 [49] INFO  umbraco.content - [T24/D17] Saved Xml to file.
-2016-07-29 20:58:37,964 [49] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T31/D17] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 20:58:38,139 [49] INFO  Umbraco.Core.UmbracoApplicationBase - [T28/D17] Application shutdown. Reason: BinDirChangeOrDirectoryRename
-2016-07-29 20:59:17,880 [57] INFO  Umbraco.Core.CoreBootManager - [T30/D18] Umbraco application starting
-2016-07-29 20:59:17,980 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Determining hash of code files on disk
-2016-07-29 20:59:17,996 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Hash determined (took 12ms)
-2016-07-29 20:59:18,027 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 20:59:18,428 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 407ms)
-2016-07-29 20:59:18,566 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 20:59:18,598 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 19ms)
-2016-07-29 20:59:18,598 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 20:59:18,613 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 27ms)
-2016-07-29 20:59:18,651 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 20:59:18,682 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 25ms)
-2016-07-29 20:59:18,682 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 20:59:18,729 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 51ms)
-2016-07-29 20:59:18,798 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 20:59:18,813 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 23ms)
-2016-07-29 20:59:18,813 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 20:59:18,847 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 23ms)
-2016-07-29 20:59:20,370 [57] INFO  umbraco.content - [T30/D18] Load Xml from file...
-2016-07-29 20:59:20,370 [57] INFO  umbraco.content - [T30/D18] Loaded Xml from file.
-2016-07-29 20:59:20,433 [57] INFO  Umbraco.Web.Search.ExamineEvents - [T30/D18] Initializing Examine and binding to business logic events
-2016-07-29 20:59:20,602 [57] INFO  Umbraco.Web.Search.ExamineEvents - [T30/D18] Adding examine event handlers for index providers: 3
-2016-07-29 20:59:20,633 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Starting resolution types of umbraco.interfaces.IApplication
-2016-07-29 20:59:20,671 [57] INFO  Umbraco.Core.PluginManager - [T30/D18] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 34ms)
-2016-07-29 20:59:20,802 [57] INFO  Umbraco.Core.CoreBootManager - [T30/D18] Umbraco application startup complete (took 2885ms)
-2016-07-29 20:59:21,018 [57] INFO  Umbraco.Web.UmbracoModule - [T31/D18] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 20:59:37,171 [42] INFO  Umbraco.Core.CoreBootManager - [T1/D19] Umbraco application starting
-2016-07-29 20:59:37,255 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Determining hash of code files on disk
-2016-07-29 20:59:37,277 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Hash determined (took 19ms)
-2016-07-29 20:59:37,296 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 20:59:37,327 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 29ms)
-2016-07-29 20:59:37,487 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 20:59:37,491 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
-2016-07-29 20:59:37,492 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 20:59:37,497 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 5ms)
-2016-07-29 20:59:37,538 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 20:59:37,541 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 3ms)
-2016-07-29 20:59:37,542 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 20:59:37,551 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 8ms)
-2016-07-29 20:59:37,649 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 20:59:37,650 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 1ms)
-2016-07-29 20:59:37,651 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 20:59:37,651 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
-2016-07-29 20:59:39,326 [42] INFO  umbraco.content - [T1/D19] Load Xml from file...
-2016-07-29 20:59:51,271 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [ScheduledPublishing] Terminating (immediate)
-2016-07-29 20:59:51,272 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [ScheduledPublishing] Cancelling tasks
-2016-07-29 20:59:51,376 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [ScheduledPublishing] Tasks cancelled, terminated
-2016-07-29 20:59:51,376 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [LogScrubber] Terminating (immediate)
-2016-07-29 20:59:51,376 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [LogScrubber] Cancelling tasks
-2016-07-29 20:59:51,477 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [LogScrubber] Tasks cancelled, terminated
-2016-07-29 20:59:51,477 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [XmlCacheFilePersister] Terminating (immediate)
-2016-07-29 20:59:51,477 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [XmlCacheFilePersister] Cancelling tasks
-2016-07-29 20:59:51,501 [57] INFO  umbraco.content - [T73/D18] Save Xml to file...
-2016-07-29 20:59:51,520 [57] INFO  umbraco.content - [T29/D18] Saved Xml to file.
-2016-07-29 20:59:51,584 [42] INFO  umbraco.content - [T1/D19] Loaded Xml from file.
-2016-07-29 20:59:51,655 [42] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D19] Initializing Examine and binding to business logic events
-2016-07-29 20:59:51,682 [57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D18] [ScheduledTasks] Tasks cancelled, terminated
-2016-07-29 20:59:51,687 [57] INFO  Umbraco.Core.UmbracoApplicationBase - [T46/D18] Application shutdown. Reason: BinDirChangeOrDirectoryRename
-2016-07-29 20:59:51,883 [42] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D19] Adding examine event handlers for index providers: 3
-2016-07-29 20:59:51,909 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Starting resolution types of umbraco.interfaces.IApplication
-2016-07-29 20:59:51,911 [42] INFO  Umbraco.Core.PluginManager - [T1/D19] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 1ms)
-2016-07-29 20:59:52,128 [42] INFO  Umbraco.Core.CoreBootManager - [T1/D19] Umbraco application startup complete (took 14914ms)
-2016-07-29 20:59:52,339 [42] INFO  Umbraco.Web.UmbracoModule - [T51/D19] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 20:59:53,264 [42] INFO  Umbraco.Core.PluginManager - [T51/D19] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2016-07-29 20:59:53,974 [42] INFO  Umbraco.Core.PluginManager - [T51/D19] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 706ms)
-2016-07-29 20:59:56,414 [42] INFO  Umbraco.Core.PluginManager - [T51/D19] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
-2016-07-29 20:59:56,524 [42] INFO  Umbraco.Core.PluginManager - [T51/D19] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 109ms)
-2016-07-29 21:00:03,469 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [ScheduledTasks] Terminating
-2016-07-29 21:00:03,469 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 21:00:03,470 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [LogScrubber] Terminating
-2016-07-29 21:00:03,470 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [LogScrubber] Waiting for tasks to complete
-2016-07-29 21:00:03,471 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [XmlCacheFilePersister] Terminating
-2016-07-29 21:00:03,471 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 21:00:03,471 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [ScheduledPublishing] Terminating
-2016-07-29 21:00:03,471 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D19] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 21:00:03,474 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T36/D19] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 21:00:03,475 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T61/D19] [LogScrubber] Tasks completed, terminated
-2016-07-29 21:00:03,480 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T29/D19] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 21:00:03,493 [42] INFO  umbraco.content - [T49/D19] Save Xml to file...
-2016-07-29 21:00:03,562 [42] INFO  umbraco.content - [T49/D19] Saved Xml to file.
-2016-07-29 21:00:03,572 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T39/D19] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 21:00:13,010 [42] INFO  Umbraco.Core.UmbracoApplicationBase - [T37/D19] Application shutdown. Reason: BinDirChangeOrDirectoryRename
-2016-07-29 21:00:41,853 [27] INFO  Umbraco.Core.CoreBootManager - [T62/D20] Umbraco application starting
-2016-07-29 21:00:41,946 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Determining hash of code files on disk
-2016-07-29 21:00:41,962 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Hash determined (took 14ms)
-2016-07-29 21:00:41,988 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 21:00:42,404 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 414ms)
-2016-07-29 21:00:42,543 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 21:00:42,562 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 19ms)
-2016-07-29 21:00:42,563 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 21:00:42,587 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 23ms)
-2016-07-29 21:00:42,617 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 21:00:42,643 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 25ms)
-2016-07-29 21:00:42,644 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 21:00:42,691 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 47ms)
-2016-07-29 21:00:42,752 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 21:00:42,774 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 20ms)
-2016-07-29 21:00:42,775 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 21:00:42,792 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 17ms)
-2016-07-29 21:00:44,270 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Starting resolution types of umbraco.interfaces.IApplication
-2016-07-29 21:00:44,310 [27] INFO  Umbraco.Core.PluginManager - [T62/D20] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 40ms)
-2016-07-29 21:00:44,477 [27] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D20] Initializing Examine and binding to business logic events
-2016-07-29 21:00:44,646 [27] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D20] Adding examine event handlers for index providers: 3
-2016-07-29 21:00:44,734 [27] INFO  umbraco.content - [T62/D20] Load Xml from file...
-2016-07-29 21:00:44,738 [27] INFO  umbraco.content - [T62/D20] Loaded Xml from file.
-2016-07-29 21:00:44,761 [27] INFO  Umbraco.Core.CoreBootManager - [T62/D20] Umbraco application startup complete (took 2865ms)
-2016-07-29 21:00:44,919 [27] INFO  Umbraco.Web.UmbracoModule - [T51/D20] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 21:00:48,773 [27] INFO  Umbraco.Core.PluginManager - [T32/D20] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2016-07-29 21:00:48,808 [27] INFO  Umbraco.Core.PluginManager - [T32/D20] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 33ms)
-2016-07-29 21:01:07,066 [27] INFO  Umbraco.Core.PluginManager - [T32/D20] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
-2016-07-29 21:01:07,197 [27] INFO  Umbraco.Core.PluginManager - [T32/D20] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 130ms)
-2016-07-29 21:01:49,613 [27] INFO  umbraco.BusinessLogic.Log - [T46/D20] Log scrubbed.  Removed all items older than 2016-05-30 21:01:49
-2016-07-29 21:02:13,219 [27] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T46/D20] Login attempt succeeded for username babybwoy2001@yahoo.co.uk from IP address 127.0.0.1
-2016-07-29 21:02:14,443 [27] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T46/D20] Login attempt succeeded for username babybwoy2001@yahoo.co.uk from IP address 127.0.0.1
-2016-07-29 21:04:24,377 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Starting resolution types of umbraco.interfaces.ICacheRefresher
-2016-07-29 21:04:24,414 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 21 (took 43ms)
-2016-07-29 21:05:11,538 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Starting resolution types of Umbraco.Web.Trees.TreeController
-2016-07-29 21:05:11,639 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 8 (took 102ms)
-2016-07-29 21:05:11,654 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 21:05:11,727 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Completed resolution of types of umbraco.interfaces.ITree, found 21 (took 68ms)
-2016-07-29 21:05:11,902 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 21:05:11,975 [27] INFO  Umbraco.Core.PluginManager - [T50/D20] Completed resolution of types of umbraco.interfaces.ITree, found 37 (took 72ms)
-2016-07-29 21:05:16,301 [27] ERROR dashboardUtilities.FeedProxy - [T39/D20] Exception occurred
-System.Net.WebException: The remote server returned an error: (404) Not Found.
-   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
-   at System.Net.WebClient.DownloadString(Uri address)
-   at dashboardUtilities.FeedProxy.Page_Load(Object sender, EventArgs e)
-2016-07-29 21:05:39,785 [27] INFO  UmbracoExamine.DataServices.UmbracoLogService - [T74/D20] Index is being optimized, Provider=InternalIndexer, NodeId=-1
-2016-07-29 21:06:02,615 [27] INFO  UmbracoExamine.DataServices.UmbracoLogService - [T32/D20] Index is being optimized, Provider=ExternalIndexer, NodeId=-1
-2016-07-29 21:06:31,234 [27] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T46/D20] Content 'Site Details' with Id '1056' has been published.
-2016-07-29 21:06:35,714 [27] INFO  umbraco.content - [T35/D20] Save Xml to file...
-2016-07-29 21:06:35,729 [27] INFO  umbraco.content - [T75/D20] Saved Xml to file.
-2016-07-29 21:06:42,496 [27] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T7/D20] Content 'Site Details' with Id '1056' has been published.
-2016-07-29 21:06:46,682 [27] INFO  umbraco.content - [T61/D20] Save Xml to file...
-2016-07-29 21:06:46,704 [27] INFO  umbraco.content - [T42/D20] Saved Xml to file.
-2016-07-29 21:07:12,055 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [XmlCacheFilePersister] Terminating
-2016-07-29 21:07:12,055 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledTasks] Terminating
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledPublishing] Terminating
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [LogScrubber] Terminating
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [LogScrubber] Waiting for tasks to complete
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T54/D20] [LogScrubber] Tasks completed, terminated
-2016-07-29 21:07:12,071 [27] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T61/D20] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 21:07:12,093 [27] INFO  Umbraco.Core.UmbracoApplicationBase - [T54/D20] Application shutdown. Reason: BinDirChangeOrDirectoryRename
-2016-07-29 21:07:25,263 [42] INFO  Umbraco.Core.CoreBootManager - [T30/D21] Umbraco application starting
-2016-07-29 21:07:25,347 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Determining hash of code files on disk
-2016-07-29 21:07:25,363 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Hash determined (took 12ms)
-2016-07-29 21:07:25,379 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 21:07:25,748 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 358ms)
-2016-07-29 21:07:25,898 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 21:07:25,917 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 20ms)
-2016-07-29 21:07:25,917 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 21:07:25,933 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 26ms)
-2016-07-29 21:07:25,980 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 21:07:26,002 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 21ms)
-2016-07-29 21:07:26,002 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 21:07:26,049 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 53ms)
-2016-07-29 21:07:26,134 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 21:07:26,149 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 17ms)
-2016-07-29 21:07:26,149 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 21:07:26,165 [42] INFO  Umbraco.Core.PluginManager - [T30/D21] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 24ms)
-2016-07-29 21:07:27,804 [42] INFO  umbraco.content - [T30/D21] Load Xml from file...
-2016-07-29 21:07:27,806 [42] INFO  umbraco.content - [T30/D21] Loaded Xml from file.
-2016-07-29 21:07:27,885 [42] INFO  Umbraco.Web.Search.ExamineEvents - [T30/D21] Initializing Examine and binding to business logic events
-2016-07-29 21:07:28,054 [42] INFO  Umbraco.Web.Search.ExamineEvents - [T30/D21] Adding examine event handlers for index providers: 3
-2016-07-29 21:07:28,207 [42] INFO  Umbraco.Core.CoreBootManager - [T30/D21] Umbraco application startup complete (took 2909ms)
-2016-07-29 21:07:28,423 [42] INFO  Umbraco.Web.UmbracoModule - [T46/D21] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 21:07:33,203 [42] INFO  Umbraco.Core.PluginManager - [T50/D21] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2016-07-29 21:07:33,251 [42] INFO  Umbraco.Core.PluginManager - [T50/D21] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 45ms)
-2016-07-29 21:07:49,435 [42] INFO  Umbraco.Core.PluginManager - [T50/D21] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
-2016-07-29 21:07:49,535 [42] INFO  Umbraco.Core.PluginManager - [T50/D21] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 99ms)
-2016-07-29 21:08:40,359 [42] INFO  umbraco.BusinessLogic.Log - [T74/D21] Log scrubbed.  Removed all items older than 2016-05-30 21:08:39
-2016-07-29 21:17:12,112 [42] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T49/D21] Content 'Price List' with Id '4125' has been published.
-2016-07-29 21:17:14,063 [42] INFO  Umbraco.Core.PluginManager - [T49/D21] Starting resolution types of umbraco.interfaces.ICacheRefresher
-2016-07-29 21:17:14,101 [42] INFO  Umbraco.Core.PluginManager - [T49/D21] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 21 (took 50ms)
-2016-07-29 21:17:19,558 [42] INFO  umbraco.content - [T79/D21] Save Xml to file...
-2016-07-29 21:17:20,291 [42] INFO  umbraco.content - [T77/D21] Saved Xml to file.
-2016-07-29 22:06:27,099 [42] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T78/D21] Executing Umbraco RouteDefinition controller
-2016-07-29 22:06:27,631 [42] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T78/D21] Finished (took 520ms)
-2016-07-29 22:06:40,292 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Starting resolution types of Umbraco.Web.Trees.TreeController
-2016-07-29 22:06:40,390 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 8 (took 98ms)
-2016-07-29 22:06:40,401 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 22:06:40,495 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Completed resolution of types of umbraco.interfaces.ITree, found 21 (took 93ms)
-2016-07-29 22:06:40,599 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Starting resolution types of umbraco.interfaces.ITree
-2016-07-29 22:06:40,666 [42] INFO  Umbraco.Core.PluginManager - [T78/D21] Completed resolution of types of umbraco.interfaces.ITree, found 37 (took 65ms)
-2016-07-29 22:07:09,558 [42] INFO  Umbraco.Core.PluginManager - [T76/D21] Starting resolution types of Umbraco.Web.Trees.TreeController
-2016-07-29 22:07:09,558 [42] INFO  Umbraco.Core.PluginManager - [T76/D21] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 8 (took 0ms)
-2016-07-29 22:07:46,621 [42] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T55/D21] Login attempt succeeded for username denfordmutseriwa@yahoo.com from IP address 127.0.0.1
-2016-07-29 22:07:47,726 [42] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T55/D21] Login attempt succeeded for username denfordmutseriwa@yahoo.com from IP address 127.0.0.1
-2016-07-29 22:08:53,546 [42] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T37/D21] Content 'Denford Mutseriwa - ch_18caGOE4n3HnKh06ZaH3aS8C' with Id '0' has been published.
-2016-07-29 22:08:55,833 [42] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T37/D21] Executing Umbraco RouteDefinition controller
-2016-07-29 22:08:59,469 [42] INFO  umbraco.content - [T55/D21] Save Xml to file...
-2016-07-29 22:08:59,685 [42] INFO  umbraco.content - [T77/D21] Saved Xml to file.
-2016-07-29 22:09:03,002 [42] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T37/D21] Finished (took 7169ms)
-2016-07-29 22:12:37,690 [42] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T28/D21] Content 'Contact' with Id '1071' has been published.
-2016-07-29 22:12:44,567 [42] INFO  umbraco.content - [T55/D21] Save Xml to file...
-2016-07-29 22:12:44,643 [42] INFO  umbraco.content - [T55/D21] Saved Xml to file.
-2016-07-29 22:13:44,306 [42] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T28/D21] Content 'Contact' with Id '1071' has been published.
-2016-07-29 22:13:50,437 [42] INFO  umbraco.content - [T55/D21] Save Xml to file...
-2016-07-29 22:13:50,714 [42] INFO  umbraco.content - [T78/D21] Saved Xml to file.
-2016-07-29 22:13:51,926 [42] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T28/D21] Content 'Contact' with Id '1071' has been published.
-2016-07-29 22:13:58,820 [42] INFO  umbraco.content - [T28/D21] Save Xml to file...
-2016-07-29 22:13:58,922 [42] INFO  umbraco.content - [T28/D21] Saved Xml to file.
-2016-07-29 22:30:38,626 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledTasks] Terminating
-2016-07-29 22:30:38,626 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledPublishing] Terminating
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [LogScrubber] Terminating
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [LogScrubber] Waiting for tasks to complete
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [LogScrubber] Tasks completed, terminated
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [XmlCacheFilePersister] Terminating
-2016-07-29 22:30:38,630 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T93/D21] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 22:30:38,631 [42] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T92/D21] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 22:30:38,761 [42] INFO  Umbraco.Core.UmbracoApplicationBase - [T95/D21] Application shutdown. Reason: ConfigurationChange
-2016-07-29 22:30:51,561 [85] INFO  Umbraco.Core.CoreBootManager - [T62/D22] Umbraco application starting
-2016-07-29 22:30:51,658 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Determining hash of code files on disk
-2016-07-29 22:30:51,682 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Hash determined (took 19ms)
-2016-07-29 22:30:51,703 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 22:30:51,750 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 44ms)
-2016-07-29 22:30:51,929 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 22:30:51,932 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
-2016-07-29 22:30:51,933 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 22:30:51,935 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 2ms)
-2016-07-29 22:30:51,973 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 22:30:51,976 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 3ms)
-2016-07-29 22:30:51,977 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 22:30:51,986 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 9ms)
-2016-07-29 22:30:52,076 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 22:30:52,078 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 1ms)
-2016-07-29 22:30:52,079 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 22:30:52,080 [85] INFO  Umbraco.Core.PluginManager - [T62/D22] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 1ms)
-2016-07-29 22:30:53,787 [85] INFO  umbraco.content - [T62/D22] Load Xml from file...
-2016-07-29 22:30:53,792 [85] INFO  umbraco.content - [T62/D22] Loaded Xml from file.
-2016-07-29 22:30:53,884 [85] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D22] Initializing Examine and binding to business logic events
-2016-07-29 22:30:54,065 [85] INFO  Umbraco.Web.Search.ExamineEvents - [T62/D22] Adding examine event handlers for index providers: 3
-2016-07-29 22:30:54,245 [85] INFO  Umbraco.Core.CoreBootManager - [T62/D22] Umbraco application startup complete (took 2642ms)
-2016-07-29 22:30:54,406 [85] INFO  Umbraco.Web.UmbracoModule - [T39/D22] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 22:31:55,937 [85] INFO  umbraco.BusinessLogic.Log - [T95/D22] Log scrubbed.  Removed all items older than 2016-05-30 22:31:55
-2016-07-29 22:31:56,020 [85] INFO  Umbraco.Core.PluginManager - [T74/D22] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2016-07-29 22:31:56,026 [85] INFO  Umbraco.Core.PluginManager - [T74/D22] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 4ms)
-2016-07-29 22:40:27,370 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledPublishing] Terminating
-2016-07-29 22:40:27,370 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledPublishing] Waiting for tasks to complete
-2016-07-29 22:40:27,370 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledPublishing] Tasks completed, terminated
-2016-07-29 22:40:27,370 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [XmlCacheFilePersister] Terminating
-2016-07-29 22:40:27,370 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [XmlCacheFilePersister] Waiting for tasks to complete
-2016-07-29 22:40:27,385 [85] INFO  umbraco.content - [T91/D22] Save Xml to file...
-2016-07-29 22:40:27,454 [85] INFO  umbraco.content - [T36/D22] Saved Xml to file.
-2016-07-29 22:40:27,454 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T36/D22] [XmlCacheFilePersister] Tasks completed, terminated
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledTasks] Terminating
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledTasks] Waiting for tasks to complete
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [ScheduledTasks] Tasks completed, terminated
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [LogScrubber] Terminating
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [LogScrubber] Waiting for tasks to complete
-2016-07-29 22:40:27,664 [85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T51/D22] [LogScrubber] Tasks completed, terminated
-2016-07-29 22:40:27,667 [85] INFO  Umbraco.Core.UmbracoApplicationBase - [T39/D22] Application shutdown. Reason: ConfigurationChange
-2016-07-29 22:40:57,050 [82] INFO  Umbraco.Core.CoreBootManager - [T1/D23] Umbraco application starting
-2016-07-29 22:40:57,163 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Determining hash of code files on disk
-2016-07-29 22:40:57,185 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Hash determined (took 18ms)
-2016-07-29 22:40:57,219 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 22:40:57,867 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 644ms)
-2016-07-29 22:40:58,049 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 22:40:58,077 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 27ms)
-2016-07-29 22:40:58,078 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 22:40:58,130 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 52ms)
-2016-07-29 22:40:58,166 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 22:40:58,209 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 42ms)
-2016-07-29 22:40:58,210 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 22:40:58,288 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 77ms)
-2016-07-29 22:40:58,381 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 22:40:58,409 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 27ms)
-2016-07-29 22:40:58,409 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 22:40:58,465 [82] INFO  Umbraco.Core.PluginManager - [T1/D23] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 55ms)
-2016-07-29 22:41:00,699 [82] INFO  umbraco.content - [T1/D23] Load Xml from file...
-2016-07-29 22:41:00,705 [82] INFO  umbraco.content - [T1/D23] Loaded Xml from file.
-2016-07-29 22:41:00,806 [82] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D23] Initializing Examine and binding to business logic events
-2016-07-29 22:41:01,043 [82] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D23] Adding examine event handlers for index providers: 3
-2016-07-29 22:41:01,081 [82] INFO  Umbraco.Core.CoreBootManager - [T1/D23] Umbraco application startup complete (took 3979ms)
-2016-07-29 22:41:01,217 [82] INFO  Umbraco.Web.UmbracoModule - [T92/D23] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
-2016-07-29 22:41:31,338 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledPublishing] Terminating (immediate)
-2016-07-29 22:41:31,339 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledPublishing] Cancelling tasks
-2016-07-29 22:41:31,445 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledPublishing] Tasks cancelled, terminated
-2016-07-29 22:41:31,445 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledTasks] Terminating (immediate)
-2016-07-29 22:41:31,445 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledTasks] Cancelling tasks
-2016-07-29 22:41:31,546 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [ScheduledTasks] Tasks cancelled, terminated
-2016-07-29 22:41:31,546 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [LogScrubber] Terminating (immediate)
-2016-07-29 22:41:31,546 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [LogScrubber] Cancelling tasks
-2016-07-29 22:41:31,647 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [LogScrubber] Tasks cancelled, terminated
-2016-07-29 22:41:31,648 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [XmlCacheFilePersister] Terminating (immediate)
-2016-07-29 22:41:31,648 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [XmlCacheFilePersister] Cancelling tasks
-2016-07-29 22:41:31,667 [82] INFO  umbraco.content - [T46/D23] Save Xml to file...
-2016-07-29 22:41:31,699 [82] INFO  umbraco.content - [T86/D23] Saved Xml to file.
-2016-07-29 22:41:31,749 [82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T95/D23] [XmlCacheFilePersister] Tasks cancelled, terminated
-2016-07-29 22:41:31,753 [82] INFO  Umbraco.Core.UmbracoApplicationBase - [T36/D23] Application shutdown. Reason: CodeDirChangeOrDirectoryRename
-2016-07-29 22:41:49,103 [29] INFO  Umbraco.Core.CoreBootManager - [T1/D24] Umbraco application starting
-2016-07-29 22:41:49,221 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Determining hash of code files on disk
-2016-07-29 22:41:49,245 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Hash determined (took 20ms)
-2016-07-29 22:41:49,271 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2016-07-29 22:41:49,318 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 44ms)
-2016-07-29 22:41:49,539 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2016-07-29 22:41:49,542 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
-2016-07-29 22:41:49,542 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2016-07-29 22:41:49,547 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 4ms)
-2016-07-29 22:41:49,612 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2016-07-29 22:41:49,616 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 3ms)
-2016-07-29 22:41:49,616 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2016-07-29 22:41:49,626 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 10ms)
-2016-07-29 22:41:49,724 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2016-07-29 22:41:49,726 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 1ms)
-2016-07-29 22:41:49,726 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2016-07-29 22:41:49,728 [29] INFO  Umbraco.Core.PluginManager - [T1/D24] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 1ms)
-2016-07-29 22:41:52,217 [29] INFO  umbraco.content - [T1/D24] Load Xml from file...
-2016-07-29 22:41:52,223 [29] INFO  umbraco.content - [T1/D24] Loaded Xml from file.
-2016-07-29 22:41:52,327 [29] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D24] Initializing Examine and binding to business logic events
-2016-07-29 22:41:52,564 [29] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D24] Adding examine event handlers for index providers: 3
-2016-07-29 22:41:52,601 [29] INFO  Umbraco.Core.CoreBootManager - [T1/D24] Umbraco application startup complete (took 3445ms)
-2016-07-29 22:41:52,886 [29] INFO  Umbraco.Web.UmbracoModule - [T86/D24] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
+﻿2016-07-31 00:44:07,767 [52] INFO  umbraco.BusinessLogic.Log - [T291/D6] Log scrubbed.  Removed all items older than 2016-06-01 00:44:07
+2016-07-31 04:44:07,798 [52] INFO  umbraco.BusinessLogic.Log - [T74/D6] Log scrubbed.  Removed all items older than 2016-06-01 04:44:07
+2016-07-31 05:06:22,163 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledTasks] Terminating
+2016-07-31 05:06:22,163 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledTasks] Waiting for tasks to complete
+2016-07-31 05:06:22,165 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledTasks] Tasks completed, terminated
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [LogScrubber] Terminating
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [LogScrubber] Waiting for tasks to complete
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [LogScrubber] Tasks completed, terminated
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledPublishing] Terminating
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledPublishing] Waiting for tasks to complete
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [ScheduledPublishing] Tasks completed, terminated
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [XmlCacheFilePersister] Terminating
+2016-07-31 05:06:22,166 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T55/D6] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-07-31 05:06:22,175 [52] INFO  umbraco.content - [T53/D6] Save Xml to file...
+2016-07-31 05:06:22,253 [52] INFO  umbraco.content - [T32/D6] Saved Xml to file.
+2016-07-31 05:06:22,276 [52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T32/D6] [XmlCacheFilePersister] Tasks completed, terminated
+2016-07-31 05:06:22,380 [52] INFO  Umbraco.Core.UmbracoApplicationBase - [T33/D6] Application shutdown. Reason: HostingEnvironment
+2016-07-31 05:06:29,525 [6] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application starting
+2016-07-31 05:06:29,625 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Determining hash of code files on disk
+2016-07-31 05:06:29,648 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Hash determined (took 20ms)
+2016-07-31 05:06:29,669 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2016-07-31 05:06:29,710 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 38ms)
+2016-07-31 05:06:29,864 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2016-07-31 05:06:29,865 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+2016-07-31 05:06:29,866 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2016-07-31 05:06:29,988 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 122ms)
+2016-07-31 05:06:30,020 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2016-07-31 05:06:30,022 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 2ms)
+2016-07-31 05:06:30,022 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2016-07-31 05:06:30,028 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 5ms)
+2016-07-31 05:06:30,112 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2016-07-31 05:06:30,114 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 1ms)
+2016-07-31 05:06:30,114 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2016-07-31 05:06:30,115 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2016-07-31 05:06:31,746 [6] INFO  umbraco.content - [T1/D2] Load Xml from file...
+2016-07-31 05:06:31,755 [6] INFO  umbraco.content - [T1/D2] Loaded Xml from file.
+2016-07-31 05:06:31,933 [6] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Initializing Examine and binding to business logic events
+2016-07-31 05:06:32,101 [6] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Adding examine event handlers for index providers: 3
+2016-07-31 05:06:32,127 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of umbraco.interfaces.IApplication
+2016-07-31 05:06:32,128 [6] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 1ms)
+2016-07-31 05:06:32,159 [6] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application startup complete (took 2597ms)
+2016-07-31 05:27:21,887 [6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T33/D2] [XmlCacheFilePersister] Terminating
+2016-07-31 05:27:21,887 [6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T33/D2] [XmlCacheFilePersister] Waiting for tasks to complete
+2016-07-31 05:27:21,933 [6] INFO  umbraco.content - [T7/D2] Save Xml to file...
+2016-07-31 05:27:22,059 [6] INFO  umbraco.content - [T15/D2] Saved Xml to file.
+2016-07-31 05:27:22,066 [6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [T37/D2] [XmlCacheFilePersister] Tasks completed, terminated
+2016-07-31 05:27:22,208 [6] INFO  Umbraco.Core.UmbracoApplicationBase - [T33/D2] Application shutdown. Reason: HostingEnvironment
+2016-07-31 20:40:53,182 [11] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application starting
+2016-07-31 20:40:53,313 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Determining hash of code files on disk
+2016-07-31 20:40:53,340 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Hash determined (took 23ms)
+2016-07-31 20:40:53,376 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2016-07-31 20:40:53,967 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 43 (took 587ms)
+2016-07-31 20:40:54,166 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2016-07-31 20:40:54,193 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 26ms)
+2016-07-31 20:40:54,193 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2016-07-31 20:40:54,332 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 18 (took 138ms)
+2016-07-31 20:40:54,375 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2016-07-31 20:40:54,407 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 8 (took 32ms)
+2016-07-31 20:40:54,408 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2016-07-31 20:40:54,472 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 53 (took 64ms)
+2016-07-31 20:40:54,579 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2016-07-31 20:40:54,610 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 30ms)
+2016-07-31 20:40:54,610 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2016-07-31 20:40:54,637 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 27ms)
+2016-07-31 20:40:57,057 [11] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Initializing Examine and binding to business logic events
+2016-07-31 20:40:57,283 [11] INFO  Umbraco.Web.Search.ExamineEvents - [T1/D2] Adding examine event handlers for index providers: 3
+2016-07-31 20:40:57,344 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Starting resolution types of umbraco.interfaces.IApplication
+2016-07-31 20:40:57,406 [11] INFO  Umbraco.Core.PluginManager - [T1/D2] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 61ms)
+2016-07-31 20:40:57,585 [11] INFO  umbraco.content - [T1/D2] Load Xml from file...
+2016-07-31 20:40:57,596 [11] INFO  umbraco.content - [T1/D2] Loaded Xml from file.
+2016-07-31 20:40:57,638 [11] INFO  Umbraco.Core.CoreBootManager - [T1/D2] Umbraco application startup complete (took 4404ms)
+2016-07-31 20:41:04,503 [11] INFO  Umbraco.Web.UmbracoModule - [T6/D2] Setting OriginalRequestUrl: local.sweetserenitybysarah.com:80/umbraco
+2016-07-31 20:41:05,751 [11] INFO  Umbraco.Core.PluginManager - [T6/D2] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2016-07-31 20:41:05,799 [11] INFO  Umbraco.Core.PluginManager - [T6/D2] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 46ms)
+2016-07-31 20:41:20,510 [11] INFO  Umbraco.Core.PluginManager - [T6/D2] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2016-07-31 20:41:20,689 [11] INFO  Umbraco.Core.PluginManager - [T6/D2] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 179ms)
+2016-07-31 20:42:58,916 [11] INFO  umbraco.BusinessLogic.Log - [T5/D2] Log scrubbed.  Removed all items older than 2016-06-01 20:42:58
+2016-07-31 20:46:54,702 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T8/D2] Executing Umbraco RouteDefinition controller
+2016-07-31 20:46:54,911 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T8/D2] Finished (took 208ms)
+2016-07-31 20:48:20,633 [11] INFO  Umbraco.Core.PluginManager - [T20/D2] Starting resolution types of umbraco.interfaces.ICacheRefresher
+2016-07-31 20:48:20,685 [11] INFO  Umbraco.Core.PluginManager - [T20/D2] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 21 (took 51ms)
+2016-07-31 20:48:22,458 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T20/D2] Executing Umbraco RouteDefinition controller
+2016-07-31 20:48:23,091 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T20/D2] Finished (took 633ms)
+2016-07-31 20:49:10,934 [11] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T28/D2] Login attempt succeeded for username babybwoy2001@yahoo.co.uk from IP address 127.0.0.1
+2016-07-31 20:49:11,970 [11] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T28/D2] Login attempt succeeded for username babybwoy2001@yahoo.co.uk from IP address 127.0.0.1
+2016-07-31 20:58:14,721 [11] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T34/D2] Content 'Denford Mutseriwa - ch_18dI72E4n3HnKh06ivGjF7hY' with Id '0' has been published.
+2016-07-31 20:58:17,752 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T34/D2] Executing Umbraco RouteDefinition controller
+2016-07-31 20:58:21,271 [11] INFO  umbraco.content - [T12/D2] Save Xml to file...
+2016-07-31 20:58:21,634 [11] INFO  umbraco.content - [T12/D2] Saved Xml to file.
+2016-07-31 20:58:26,331 [11] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T34/D2] Finished (took 8579ms)

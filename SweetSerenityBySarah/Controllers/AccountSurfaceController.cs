@@ -60,7 +60,7 @@ namespace SweetSerenityBySarah.Controllers
                         {
                             Subject = "Your Registration on Sweet Serenity by Sarah",
                             Body = mailBody,
-                            From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                            From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                         };
                         userEmailMessage.To.Add(new MailAddress(registerModel.Email, registerModel.Name));
                         userEmailMessage.IsBodyHtml = true;
@@ -77,7 +77,7 @@ namespace SweetSerenityBySarah.Controllers
                         {
                             Subject = "The registration form submited on Sweet Serenity by Sarah",
                             Body = adminMailBody,
-                            From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                            From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                         };
                         adminEmail.To.Add(new MailAddress("sarahbelletty@yahoo.co.uk", "Sarah"));
                         adminEmail.Bcc.Add("denfordmutseriwa@yahoo.com");

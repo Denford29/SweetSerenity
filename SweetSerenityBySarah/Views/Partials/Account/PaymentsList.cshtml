@@ -50,8 +50,102 @@
         @if (Model.Payments.Count > 10)
             {
             <div class="text-center">
-                @PagingTemplate.RenderPaging(paging, Model.CurrentPage.Id)
+                @RenderPaging(paging, Model.CurrentPage.Id)
             </div>
             }
     </div>
+}
+
+@helper RenderPaging(Paging paging, int currentId)
+    {
+        if (!String.IsNullOrEmpty(HttpContext.Current.Request.QueryString["q"]))
+            {
+            var searchQuery = Request.QueryString["q"].Trim();
+
+            <ul class="pagination">
+
+                @if (paging.CurrentPage > 1)
+                    {
+                    <li>
+                        <a href="@library.NiceUrl(currentId)?q=@searchQuery&page=1">
+                            &raquo;
+                        </a>
+                    </li>
+                    }
+
+                @for (var i = 1; i <= paging.TotalPages; i++)
+                    {
+                    if (paging.CurrentPage == i)
+                        {
+                        <li class="active">
+                            <a href="#">
+                                @i
+                            </a>
+                        </li>
+                        }
+                    else
+                        {
+                        <li>
+                            <a href="@library.NiceUrl(currentId)?q=@searchQuery&page=@i">
+                                @i
+                            </a>
+                        </li>
+                        }
+                    }
+
+                @if (paging.CurrentPage < paging.TotalPages)
+                    {
+                    <li>
+                        <a href="@library.NiceUrl(currentId)?q=@searchQuery&page=@paging.TotalPages">
+                            &raquo;
+                        </a>
+                    </li>
+                    }
+
+            </ul>
+            }
+        else
+            {
+            <ul class="pagination">
+
+                @if (paging.CurrentPage > 1)
+                    {
+                    <li>
+                        <a href="@library.NiceUrl(currentId)?page=1">
+                            &raquo;
+                        </a>
+                    </li>
+                    }
+
+                @for (var i = 1; i <= paging.TotalPages; i++)
+                    {
+                    if (paging.CurrentPage == i)
+                        {
+                        <li class="active">
+                            <a href="#">
+                                @i
+                            </a>
+                        </li>
+                        }
+                    else
+                        {
+                        <li>
+                            <a href="@library.NiceUrl(currentId)?page=@i">
+                                @i
+                            </a>
+                        </li>
+                        }
+                    }
+
+                @if (paging.CurrentPage < paging.TotalPages)
+                    {
+                    <li>
+                        <a href="@library.NiceUrl(currentId)?page=@paging.TotalPages">
+                            &raquo;
+                        </a>
+                    </li>
+                    }
+
+            </ul>
+            }
 }

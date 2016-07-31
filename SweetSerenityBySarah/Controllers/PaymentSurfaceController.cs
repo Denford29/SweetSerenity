@@ -186,7 +186,7 @@ namespace SweetSerenityBySarah.Controllers
                 {
                     Subject = "Your payment on Sweet Serenity by Sarah",
                     Body = mailBody,
-                    From = new MailAddress("support@sweetserenitybysarah.com", "Sarah")
+                    From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sarah")
                 };
                 userEmailMessage.To.Add(new MailAddress(stripeCharge.ReceiptEmail.Trim(), memberFullName.Trim()));
                 userEmailMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
@@ -210,7 +210,7 @@ namespace SweetSerenityBySarah.Controllers
                 {
                     Subject = "A payment has been submited on Sweet Serenity by Sarah",
                     Body = adminMailBody,
-                    From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                    From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                 };
                 adminEmaillMessage.To.Add(new MailAddress("sarahbelletty@yahoo.co.uk", "Sarah"));
                 adminEmaillMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
@@ -268,7 +268,7 @@ namespace SweetSerenityBySarah.Controllers
                             {
                                 Subject = "Stripe payment details publish error on Sweet Serenity by Sarah",
                                 Body = errorMessage,
-                                From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                                From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                             };
                             errorEmaillMessage.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
                             errorEmaillMessage.IsBodyHtml = true;
@@ -289,7 +289,7 @@ namespace SweetSerenityBySarah.Controllers
                 {
                     Subject = "Stripe payment error on Sweet Serenity by Sarah",
                     Body = errorMessage,
-                    From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                    From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                 };
                 errorEmaillMessage.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
                 errorEmaillMessage.IsBodyHtml = true;

@@ -39,7 +39,7 @@ namespace SweetSerenityBySarah.Controllers
                     {
                         Subject = "Your Contact on Sweet Serenity by Sarah",
                         Body = mailBody,
-                        From = new MailAddress("support@sweetserenitybysarah.com", "Sarah")
+                        From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sarah")
                     };
                     userEmailMessage.To.Add(new MailAddress(formContactModel.EmailAddress.Trim(),
                         formContactModel.FullName.Trim()));
@@ -61,7 +61,7 @@ namespace SweetSerenityBySarah.Controllers
                     {
                         Subject = "The contact form has been submited on Sweet Serenity by Sarah",
                         Body = adminMailBody,
-                        From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                        From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                     };
                     adminEmaillMessage.To.Add(new MailAddress("sarahbelletty@yahoo.co.uk", "Sarah"));
                     adminEmaillMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
@@ -78,7 +78,7 @@ namespace SweetSerenityBySarah.Controllers
                     {
                         Subject = "Website error on Sweet Serenity by Sarah",
                         Body = errorMessage,
-                        From = new MailAddress("support@sweetserenitybysarah.com", "Sweet Serenity Team")
+                        From = new MailAddress("admin@sweetserenitybysarah.com.au", "Sweet Serenity Team")
                     };
                     errorEmaillMessage.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
                     errorEmaillMessage.IsBodyHtml = true;
@@ -98,80 +98,5 @@ namespace SweetSerenityBySarah.Controllers
             return Redirect("/");
         }
 
-        //[HttpPost]
-        //public ActionResult SweetSerenityContactSubmit(ContactModel formContactModel)
-        //    {
-        //    if (!ModelState.IsValid)
-        //        {
-        //        TempData["contactError"] =
-        //            "Opps... Form Error, There was an error with your details please check them and try again.";
-        //        return CurrentUmbracoPage();
-        //        }
-        //    else
-        //        {
-        //        DateTime dateTime;
-        //        var submittedDate = formContactModel.FormDate;
-        //        if (DateTime.TryParseExact(submittedDate, "dd/mm/yyyy", CultureInfo.InvariantCulture,
-        //            DateTimeStyles.None, out dateTime))
-        //            {
-        //            try
-        //                {
-        //                const string mailBody =
-        //                    "Thank you for contacting us on Sweet Serenity by Sarah, we have got your enquiry and a member of the team will get back to you as soon as posible.<br /> <br />Regards, <br /> Sarah";
-        //                var userEmailMessage = new MailMessage
-        //                {
-        //                    Subject = "Your Contact on Sweet Serenity by Sarah",
-        //                    Body = mailBody,
-        //                    From = new MailAddress("support@rdmonline.co.uk", "RDM Online Team")
-        //                    //From = new MailAddress("support@sweetserenitybysarah.com", "Sarah")
-        //                };
-        //                userEmailMessage.To.Add(new MailAddress(formContactModel.EmailAddress.Trim(),
-        //                    formContactModel.FullName.Trim()));
-        //                userEmailMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
-        //                userEmailMessage.IsBodyHtml = true;
-        //                var userSmtpClient = new SmtpClient();
-        //                userSmtpClient.Send(userEmailMessage);
-
-        //                string adminMailBody =
-        //                    "The contact form has been submitted on the website with the details below. <br /><br />";
-        //                adminMailBody += "Full Name : " + formContactModel.FullName.Trim() + "<br />";
-        //                adminMailBody += "Email Address : " + formContactModel.EmailAddress.Trim() + "<br />";
-        //                adminMailBody += "Phone Number : " + formContactModel.PhoneNumber.Trim() + "<br />";
-        //                adminMailBody += "Spam Date : " + formContactModel.FormDate.Trim() + "<br />";
-        //                adminMailBody += "Message : " + formContactModel.Message.Trim() + "<br />";
-        //                adminMailBody += "<br />Regards,<br />Sarah";
-
-        //                var adminEmaillMessage = new MailMessage
-        //                {
-        //                    Subject = "The contact form has been submited on Sweet Serenity by Sarah",
-        //                    Body = adminMailBody,
-        //                    From = new MailAddress("support@rdmonline.co.uk", "RDM Online Team")
-        //                    //From = new MailAddress("support@sweetserenitybysarah.com", "Sarah")
-        //                };
-        //                adminEmaillMessage.To.Add(new MailAddress("sarahbelletty@yahoo.co.uk", "Sarah"));
-        //                adminEmaillMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
-        //                adminEmaillMessage.IsBodyHtml = true;
-        //                var adminSmtpClient = new SmtpClient();
-        //                adminSmtpClient.Send(adminEmaillMessage);
-        //                }
-        //            catch (Exception ex)
-        //                {
-        //                var errorMessage = ex.Message + "\r\n \r\n" + ex.StackTrace + "\r\n \r\n" + ex.InnerException;
-        //                LogHelper.Error(MethodBase.GetCurrentMethod().DeclaringType, errorMessage, ex);
-        //                TempData["contactError"] =
-        //                    "Opps... Contact Error, there was a problem submitting your request.";
-        //                return RedirectToCurrentUmbracoPage();
-        //                }
-
-        //            TempData["contactSuccess"] =
-        //                "Your contact request has been submitted successfully, a member of the team will get in touch with you shortly...";
-        //            return CurrentUmbracoPage();
-        //            }
-        //        else
-        //            {
-        //            return Redirect("/");
-        //            }
-        //        }
-        //    }
     }
 }
